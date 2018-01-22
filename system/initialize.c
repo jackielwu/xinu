@@ -84,10 +84,10 @@ void	nulluser()
 
 	/* Become the Null process (i.e., guarantee that the CPU has	*/
 	/*  something to run when no other process is ready to execute)	*/
-
-	while (TRUE) {
-		;		/* Do nothing */
-	}
+  halt();
+	//while (TRUE) {
+	//	;		/* Do nothing */
+	//}
 
 }
 
