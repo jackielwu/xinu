@@ -1,6 +1,6 @@
 /* newProcess.c - newProcess */
 
-#include //
+#include <unistd.h>//
 
 /*------------------------------------------------------------------------
  *  newProcess - Wrapper function to execute binary
@@ -11,8 +11,14 @@ int newProcess(
   )
 {
   /* Call fork */
-
-  /* Call execve */
+  pid_t childPID = fork();
+  
+  if ( childPID == 0 )
+  {
+    /* Call execve */
+    execve(filename, NULL, NULL);
+    _exit(1);
+  }
 
   return 0;
 }
