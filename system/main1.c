@@ -5,14 +5,8 @@
 
 process main(void)
 {
-  recvclr();
-  resume(create(onandon, 2048, 30, "onandon", 1, CONSOLE));
-  pid_t cPID = fork();
-
-  if (cPID == 0)
-  {
-    resume(create(onandon, 2048, 30, "onandon", 1, CONSOLE));
-    sleep(14);
-    kill(cPID);
-  }
+  pid_t cPID = create(onandon, 2048, 30, "onandon", 1, CONSOLE);
+  resume(cPID);
+  sleep(14);
+  kill(cPID);
 }
