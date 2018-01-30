@@ -1,6 +1,6 @@
 /* onandon.c - onandon */
 
-#include <unistd.h>//
+#include <xinu.h>//
 
 /*------------------------------------------------------------------------
  *  onandon - Print x infinite loop
@@ -8,7 +8,7 @@
  */
 void onandon()
 {
-  while( true )
+  while( 1 )
   {
     putc(CONSOLE, 'x');
     sleep(2);
