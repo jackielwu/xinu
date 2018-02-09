@@ -144,8 +144,7 @@ Linker script and memory map
                 0x0000000000101a5a                console_init
                 0x0000000000101a8c                kgetc
                 0x0000000000101aae                kprintf
- .text          0x0000000000101ad0        0x0 binaries/main2.o
- .text          0x0000000000101ad0       0x5d binaries/main.o
+ .text          0x0000000000101ad0       0x5d binaries/main1.o
                 0x0000000000101ad0                main
  .text          0x0000000000101b2d       0x93 binaries/mark.o
                 0x0000000000101b2d                markinit
@@ -675,7 +674,7 @@ Linker script and memory map
                 0x00000000001110d0       0xd0 binaries/initialize.o
  .rodata        0x00000000001111a0       0x20 binaries/kill.o
  .rodata.str1.1
-                0x00000000001111c0        0x8 binaries/main.o
+                0x00000000001111c0        0x8 binaries/main1.o
  .rodata.str1.4
                 0x00000000001111c8       0x23 binaries/meminit.o
  .rodata.str1.1
@@ -1000,7 +999,7 @@ Linker script and memory map
                                          0x90 (size before relaxing)
  .eh_frame      0x0000000000114a70       0x80 binaries/kprintf.o
                                          0x98 (size before relaxing)
- .eh_frame      0x0000000000114af0       0x34 binaries/main.o
+ .eh_frame      0x0000000000114af0       0x34 binaries/main1.o
                                          0x4c (size before relaxing)
  .eh_frame      0x0000000000114b24       0x4c binaries/mark.o
                                          0x64 (size before relaxing)
@@ -1424,8 +1423,7 @@ Linker script and memory map
  .data          0x000000000011b2a0        0x0 binaries/ionull.o
  .data          0x000000000011b2a0        0x0 binaries/kill.o
  .data          0x000000000011b2a0        0x0 binaries/kprintf.o
- .data          0x000000000011b2a0        0x0 binaries/main2.o
- .data          0x000000000011b2a0        0x0 binaries/main.o
+ .data          0x000000000011b2a0        0x0 binaries/main1.o
  .data          0x000000000011b2a0        0x0 binaries/mark.o
  .data          0x000000000011b2a0       0x48 binaries/meminit.o
                 0x000000000011b2a0                gdt_copy
@@ -1665,8 +1663,7 @@ Linker script and memory map
  .bss           0x000000000011c004        0x0 binaries/ionull.o
  .bss           0x000000000011c004        0x0 binaries/kill.o
  .bss           0x000000000011c004        0x0 binaries/kprintf.o
- .bss           0x000000000011c004        0x0 binaries/main2.o
- .bss           0x000000000011c004        0x0 binaries/main.o
+ .bss           0x000000000011c004        0x0 binaries/main1.o
  .bss           0x000000000011c004        0x0 binaries/mark.o
  .bss           0x000000000011c004        0x0 binaries/meminit.o
  .bss           0x000000000011c004        0x0 binaries/mkbufpool.o
@@ -1973,8 +1970,7 @@ LOAD binaries/ioerr.o
 LOAD binaries/ionull.o
 LOAD binaries/kill.o
 LOAD binaries/kprintf.o
-LOAD binaries/main2.o
-LOAD binaries/main.o
+LOAD binaries/main1.o
 LOAD binaries/mark.o
 LOAD binaries/meminit.o
 LOAD binaries/mkbufpool.o
@@ -2200,8 +2196,7 @@ OUTPUT(../compile/xinu.elf elf32-i386)
  .comment       0x0000000000000034       0x35 binaries/ionull.o
  .comment       0x0000000000000034       0x35 binaries/kill.o
  .comment       0x0000000000000034       0x35 binaries/kprintf.o
- .comment       0x0000000000000034       0x35 binaries/main2.o
- .comment       0x0000000000000034       0x35 binaries/main.o
+ .comment       0x0000000000000034       0x35 binaries/main1.o
  .comment       0x0000000000000034       0x35 binaries/mark.o
  .comment       0x0000000000000034       0x35 binaries/meminit.o
  .comment       0x0000000000000034       0x35 binaries/mkbufpool.o
@@ -2453,9 +2448,7 @@ OUTPUT(../compile/xinu.elf elf32-i386)
  .note.GNU-stack
                 0x0000000000000000        0x0 binaries/kprintf.o
  .note.GNU-stack
-                0x0000000000000000        0x0 binaries/main2.o
- .note.GNU-stack
-                0x0000000000000000        0x0 binaries/main.o
+                0x0000000000000000        0x0 binaries/main1.o
  .note.GNU-stack
                 0x0000000000000000        0x0 binaries/mark.o
  .note.GNU-stack
