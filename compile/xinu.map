@@ -692,10 +692,12 @@ Linker script and memory map
  .rodata.str1.1
                 0x000000000011125d       0x22 binaries/quark_pdat.o
  .rodata.str1.1
-                0x000000000011127f        0x5 binaries/test.o
+                0x000000000011127f       0x22 binaries/test.o
+                                          0x4 (size before relaxing)
+ *fill*         0x000000000011127f        0x1 
  .rodata.str1.4
-                0x0000000000111284       0x27 binaries/xdone.o
- *fill*         0x00000000001112ab       0x15 
+                0x0000000000111280       0x27 binaries/xdone.o
+ *fill*         0x00000000001112a7       0x19 
  .rodata        0x00000000001112c0       0x81 binaries/ctype_.o
                 0x00000000001112c0                _ctype_
  .rodata.str1.1

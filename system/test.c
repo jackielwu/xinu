@@ -1,9 +1,9 @@
 #include <xinu.h>
 //#include "../system/host2netca.c"
-extern long host2netca();
+extern long host2netca(long x);
 
 int main()
 {
   long num = 69;
-  kprintf("%ld\n", host2netca(num));
+  kprintf("%d\n", host2netca(num));
 }
