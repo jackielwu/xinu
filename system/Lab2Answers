@@ -16,7 +16,7 @@ d. after appl1() calls fun1() and after fun1() has returned:
 Base of the stack : Address - 0x0FDEFFFC, Value - 0xFFFFFFA9
 Top of the stack : Address - 0x0FDEFFD8, Value - 0x00000070
 
-The base of the stack is always the same regardless of what has been done. The top of the stack changes when a new process is created.
+The base of the stack is always the same in the same process. The top of the stack decreases when a new process is created.
 
 Problem 5
 stackoverflowA recursively calls itself, thus it is essentially an infinite loop of callbacks. this will basically hang the entire system. The victim process will print one B before the attacker takes over.
