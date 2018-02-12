@@ -3,7 +3,7 @@ void stackoverflowB(void)
 {
   while(1)
   {
-    putc('B');
+    putc(CONSOLE, 'B');
     sleepms(1500);
   }
 }

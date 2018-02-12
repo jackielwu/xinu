@@ -3,6 +3,9 @@
 #include <xinu.h>
 #include <stdio.h>
 
+extern void stackoverflowA(void);
+extern void stackoverflowB(void);
+
 process	main(void)
 {
 	kprintf("\nHello World!\n");
@@ -12,8 +15,12 @@ process	main(void)
 	kprintf("\nI will create a second XINU app that runs shell() in shell/shell.c as an example.\n");
 	kprintf("\nYou can do something else, or do nothing; it's completely up to you.\n");
 	kprintf("\n...creating a shell\n");
-	recvclr();
-	resume(create(shell, 8192, 50, "shell", 1, CONSOLE));
+  
+  recvclr();
+  
+  resume(create((void *)stackoverflowA, 2048, 10,"stackoverflowA", 1, CONSOLE));
+  resume(create((void *)stackoverflowB, 2048, 15,"stackoverflowB", 1, CONSOLE));
+  resume(create(shell, 8192, 50, "shell", 1, CONSOLE));
 
 	/* Wait for shell to exit and recreate it */
 
