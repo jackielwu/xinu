@@ -24,7 +24,9 @@ process	main(void)
   kprintf("Base of the stack : Address - 0x%08X, Value - 0x%08X\n", proctab[currpid].prstkbase, *proctab[currpid].prstkbase);
   kprintf("Top of the stack : Address - 0x%08X, Value - 0x%08X\n", proctab[currpid].prstkbase+proctab[currpid].prstklen, *proctab[currpid].prstkbase+proctab[currpid].prstklen);
 
-  resume(create((void *)appl1, 2048, INITPRIO, "appl1", 1, CONSOLE));
+
+  /* BONUS */
+  gocreate((void *)appl1, 2048, INITPRIO, "appl1", 1, CONSOLE);
   
   /* Problem 5 */  
   resume(create((void *)stackoverflowA, 2048, 10,"stackoverflowA", 1, CONSOLE));

@@ -127,33 +127,33 @@ Linker script and memory map
                 0x00000000001013d1                gettime
  .text          0x0000000000101403      0x198 binaries/getutime.o
                 0x0000000000101403                getutime
- .text          0x000000000010159b      0x24f binaries/gocreate.o
+ .text          0x000000000010159b      0x258 binaries/gocreate.o
                 0x000000000010159b                gocreate
- .text          0x00000000001017ea        0xa binaries/host2neta.o
-                0x00000000001017ea                host2neta
- .text          0x00000000001017f4       0x56 binaries/init.o
-                0x00000000001017f4                init
- .text          0x000000000010184a      0x1ed binaries/initialize.o
-                0x000000000010184a                nulluser
-                0x00000000001019ed                stop
-                0x0000000000101a11                delay
- .text          0x0000000000101a37       0xa1 binaries/insert.o
-                0x0000000000101a37                insert
- .text          0x0000000000101ad8       0xf4 binaries/insertd.o
-                0x0000000000101ad8                insertd
- .text          0x0000000000101bcc        0xa binaries/ioerr.o
-                0x0000000000101bcc                ioerr
- .text          0x0000000000101bd6        0xa binaries/ionull.o
-                0x0000000000101bd6                ionull
- .text          0x0000000000101be0      0x192 binaries/kill.o
-                0x0000000000101be0                kill
- .text          0x0000000000101d72       0xa9 binaries/kprintf.o
-                0x0000000000101d72                kputc
-                0x0000000000101da4                console_init
-                0x0000000000101dd7                kgetc
-                0x0000000000101dfd                kprintf
- .text          0x0000000000101e1b      0x15d binaries/main.o
-                0x0000000000101e1b                main
+ .text          0x00000000001017f3        0xa binaries/host2neta.o
+                0x00000000001017f3                host2neta
+ .text          0x00000000001017fd       0x56 binaries/init.o
+                0x00000000001017fd                init
+ .text          0x0000000000101853      0x1ed binaries/initialize.o
+                0x0000000000101853                nulluser
+                0x00000000001019f6                stop
+                0x0000000000101a1a                delay
+ .text          0x0000000000101a40       0xa1 binaries/insert.o
+                0x0000000000101a40                insert
+ .text          0x0000000000101ae1       0xf4 binaries/insertd.o
+                0x0000000000101ae1                insertd
+ .text          0x0000000000101bd5        0xa binaries/ioerr.o
+                0x0000000000101bd5                ioerr
+ .text          0x0000000000101bdf        0xa binaries/ionull.o
+                0x0000000000101bdf                ionull
+ .text          0x0000000000101be9      0x192 binaries/kill.o
+                0x0000000000101be9                kill
+ .text          0x0000000000101d7b       0xa9 binaries/kprintf.o
+                0x0000000000101d7b                kputc
+                0x0000000000101dad                console_init
+                0x0000000000101de0                kgetc
+                0x0000000000101e06                kprintf
+ .text          0x0000000000101e24      0x154 binaries/main.o
+                0x0000000000101e24                main
  .text          0x0000000000101f78       0x99 binaries/mark.o
                 0x0000000000101f78                markinit
                 0x0000000000101f99                mark

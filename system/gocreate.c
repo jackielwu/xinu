@@ -39,7 +39,7 @@ pid32	gocreate(
 	prptr = &proctab[pid];
 
 	/* Initialize process table entry for new process */
-	prptr->prstate = PR_READY;	/* Initial state is suspended	*/
+	prptr->prstate = PR_SUSP;	/* Initial state is suspended	*/
 	prptr->prprio = priority;
 	prptr->prstkbase = (char *)saddr;
 	prptr->prstklen = ssize;
@@ -93,7 +93,8 @@ pid32	gocreate(
 	*--saddr = 0;			/* %esi */
 	*--saddr = 0;			/* %edi */
 	*pushsp = (unsigned long) (prptr->prstkptr = (char *)saddr);
-	restore(mask);
+  ready(pid);	
+  restore(mask);
 	return pid;
 }
 
