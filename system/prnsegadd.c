@@ -2,11 +2,11 @@
 
 void prnsegadd()
 {
-  kprintf("Start of Text at %X, end of Text at %X.\n", text, etext);
-  kprintf("Start of Data at %X, end of Data at %X.\n", data, edata);
-  kprintf("Start of Bss at %X, end of Bss at %X.\n", bss, ebss);
-  kprintf("End of XINU at %X.\n", end);
-  kprintf("Text Length : %d bytes\n", (etext - text));
-  kprintf("Data Length : %d bytes\n", (edata - data));
-  kprintf("BSS Length : %u bytes\n", (ebss - bss));
+  kprintf("Start of Text at 0x%08X, end of Text at 0x%08X.\n", (uint32)&text, (uint32)&etext-1);
+  kprintf("Start of Data at 0x%08X, end of Data at 0x%08X.\n", (uint32)&data, (uint32)&edata-1);
+  kprintf("Start of Bss at 0x%08X, end of Bss at 0x%08X.\n", (uint32)&bss, (uint32)&ebss-1);
+  kprintf("End of XINU at 0x%08X.\n", (uint32)&text-1);
+  kprintf("Text Length : %d bytes\n", (uint32)&etext - (uint32)&text);
+  kprintf("Data Length : %d bytes\n", (uint32)&edata - (uint32)&data);
+  kprintf("BSS Length : %u bytes\n", (uint32)&ebss - (uint32)&bss);
 }

@@ -1,0 +1,4 @@
+void stackoverflowA(void)
+{
+  stackoverflowA();
+}
