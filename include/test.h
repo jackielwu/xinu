@@ -1,4 +1,4 @@
-#define UPBOUND 10000
+#define UPBOUND 10000000
 
 
-void testloop(pid32 id);
+void testloop(void);

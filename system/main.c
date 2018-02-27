@@ -19,18 +19,19 @@ process	main(void)
   
   recvclr();
   
-  /* Problem 4.2 */
-  kprintf("1. main process before appl1():\n");
-  kprintf("Base of the stack : Address - 0x%08X, Value - 0x%08X\n", proctab[currpid].prstkbase, *proctab[currpid].prstkbase);
-  kprintf("Top of the stack : Address - 0x%08X, Value - 0x%08X\n", proctab[currpid].prstkbase+proctab[currpid].prstklen, *proctab[currpid].prstkbase+proctab[currpid].prstklen);
 
-
-  /* BONUS */
-  gocreate((void *)appl1, 2048, INITPRIO, "appl1", 1, CONSOLE);
   
-  /* Problem 5 */  
-  resume(create((void *)stackoverflowA, 2048, 10,"stackoverflowA", 1, CONSOLE));
-  resume(create((void *)stackoverflowB, 2048, 15,"stackoverflowB", 1, CONSOLE));
+  /* Problem 3*/  
+  resume(create((void *)testloop, 4096, 10,"testloopA", 1, CONSOLE));
+  resume(create((void *)testloop, 4096, 10,"testloopB", 1, CONSOLE));
+  resume(create((void *)testloop, 4096, 10,"testloopC", 1, CONSOLE));
+  resume(create((void *)testloop, 4096, 10,"testloopD", 1, CONSOLE));
+  
+  /* part f */
+  resume(create((void *)testloop, 4096, 20,"testloopE", 1, CONSOLE));
+  resume(create((void *)testloop, 4096, 30,"testloopF", 1, CONSOLE));
+
+
   sleep(3);  
   //resume(create(shell, 8192, 50, "shell", 1, CONSOLE));
 
