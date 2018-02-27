@@ -42,3 +42,4 @@
 #include <string.h>
 #include "onandon.h"
 #include <test.h>
+#define DEBUG
