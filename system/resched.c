@@ -32,6 +32,7 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
 		/* Old process will no longer remain current */
 
 		ptold->prstate = PR_READY;
+    ptold->prcputot += clkmilli - ptold->prctxswbeg; /* CPU ms elapsed time */
 		insert(currpid, readylist, ptold->prprio);
 	}
 
@@ -40,7 +41,8 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
 	currpid = dequeue(readylist);
 	ptnew = &proctab[currpid];
 	ptnew->prstate = PR_CURR;
-	preempt = QUANTUM;		/* Reset time slice for process	*/
+	ptnew->prctxswbeg = clkmilli; /* Save clk ms begin ctxsw */
+  preempt = QUANTUM;		/* Reset time slice for process	*/
 	ctxsw(&ptold->prstkptr, &ptnew->prstkptr);
 
 	/* Old process returns here when resumed */

@@ -17,11 +17,15 @@ void	clkhandler()
 		/* One second has passed, so increment seconds count */
 
 		clktime++;
+    clkmilli++;
 
 		/* Reset the local ms counter for the next second */
 
 		count1000 = 1000;
 	}
+  else {
+    clkmilli++;
+  }
 
 	/* Handle sleeping processes if any exist */
 

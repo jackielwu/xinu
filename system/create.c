@@ -47,7 +47,8 @@ pid32	create(
 	prptr->prstkbase = (char *)saddr;
 	prptr->prstklen = ssize;
 	prptr->prname[PNMLEN-1] = NULLCH;
-	for (i=0 ; i<PNMLEN-1 && (prptr->prname[i]=name[i])!=NULLCH; i++)
+	prptr->prcputot = 1;
+  for (i=0 ; i<PNMLEN-1 && (prptr->prname[i]=name[i])!=NULLCH; i++)
 		;
 	prptr->prsem = -1;
 	prptr->prparent = (pid32)getpid();

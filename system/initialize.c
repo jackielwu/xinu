@@ -145,6 +145,7 @@ static	void	sysinit()
 	prptr->prstkbase = getstk(NULLSTK);
 	prptr->prstklen = NULLSTK;
 	prptr->prstkptr = 0;
+  prpts->prcputot = 1;
 	currpid = NULLPROC;
 	
 	/* Initialize semaphores */
