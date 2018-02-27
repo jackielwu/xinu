@@ -27,6 +27,7 @@
 #define	INITSTK		65536	/* Initial process stack size		*/
 #define	INITPRIO	30	/* Initial process priority		*/
 #define	INITRET		userret	/* Address to which process returns	*/
+#define MAXPRIO   SHRT_MAX /* Maximum process priority */
 
 /* Inline code to check process ID (assumes interrupts are disabled)	*/
 

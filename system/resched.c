@@ -33,6 +33,7 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
 
 		ptold->prstate = PR_READY;
     ptold->prcputot += clkmilli - ptold->prctxswbeg; /* CPU ms elapsed time */
+    //ptold->prprio = MAXPRIO - ptold->prcputot;
 		insert(currpid, readylist, ptold->prprio);
 	}
 
