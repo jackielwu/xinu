@@ -36,7 +36,7 @@ process	main(void)
   /* Problem 4.3 */
   
   /* CPU Bound */
-  /*
+  /*  
   resume(create((void *)cpubound, 2048, 50,"cpuboundA", 1, CONSOLE));
   resume(create((void *)cpubound, 2048, 50,"cpuboundB", 1, CONSOLE));
   resume(create((void *)cpubound, 2048, 50,"cpuboundC", 1, CONSOLE));
@@ -45,7 +45,7 @@ process	main(void)
   */
 
   /* IO Bound */ 
-  /*
+  /*  
   resume(create((void *)iobound, 2048, 50,"ioboundA", 1, CONSOLE));
   resume(create((void *)iobound, 2048, 50,"ioboundB", 1, CONSOLE));
   resume(create((void *)iobound, 2048, 50,"ioboundC", 1, CONSOLE));
@@ -54,14 +54,14 @@ process	main(void)
   */
 
   /* Half and Half */
-
+  
   resume(create((void *)cpubound, 2048, 50,"cpuboundA", 1, CONSOLE));
   resume(create((void *)cpubound, 2048, 50,"cpuboundB", 1, CONSOLE));
   resume(create((void *)cpubound, 2048, 50,"cpuboundC", 1, CONSOLE));
   resume(create((void *)iobound, 2048, 50,"ioboundA", 1, CONSOLE));
   resume(create((void *)iobound, 2048, 50,"ioboundB", 1, CONSOLE));
   resume(create((void *)iobound, 2048, 50,"ioboundC", 1, CONSOLE));
-
+  
 
 
   //sleep(3);  

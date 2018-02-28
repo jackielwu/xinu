@@ -24,6 +24,8 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
 
 	ptold = &proctab[currpid];
   ptold->prcputot += clkmilli - ptold->prctxswbeg; /* CPU ms elapsed time */
+  
+  /* null process cannot be modified */
   if (currpid != 0)
     ptold->prprio = MAXPRIO - ptold->prcputot;
 
