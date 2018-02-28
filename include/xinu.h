@@ -44,5 +44,5 @@
 #include "onandon.h"
 
 #include <test.h>
-#define DEBUG
+//#define DEBUG
 #include <limits.h>

@@ -21,15 +21,24 @@ process	main(void)
   
 
   
-  /* Problem 3*/  
-  resume(create((void *)testloop, 4096, 10,"testloopA", 1, CONSOLE));
-  resume(create((void *)testloop, 4096, 10,"testloopB", 1, CONSOLE));
-  resume(create((void *)testloop, 4096, 10,"testloopC", 1, CONSOLE));
-  resume(create((void *)testloop, 4096, 10,"testloopD", 1, CONSOLE));
+  /* Problem 3*/
+    
+  resume(create((void *)testloop, 2048, 10,"testloopA", 1, CONSOLE));
+  resume(create((void *)testloop, 2048, 10,"testloopB", 1, CONSOLE));
+  resume(create((void *)testloop, 2048, 10,"testloopC", 1, CONSOLE));
+  resume(create((void *)testloop, 2048, 10,"testloopD", 1, CONSOLE));
   
   /* part f */
-  resume(create((void *)testloop, 4096, 20,"testloopE", 1, CONSOLE));
-  resume(create((void *)testloop, 4096, 30,"testloopF", 1, CONSOLE));
+
+  resume(create((void *)testloop, 2048, 20,"testloopE", 1, CONSOLE));
+  resume(create((void *)testloop, 2048, 30,"testloopF", 1, CONSOLE));
+  
+  /* Problem 4.3 */
+  resume(create((void *)cpubound, 2048, 50,"cpuboundA", 1, CONSOLE));
+  resume(create((void *)cpubound, 2048, 50,"cpuboundB", 1, CONSOLE));
+  resume(create((void *)cpubound, 2048, 50,"cpuboundC", 1, CONSOLE));
+  resume(create((void *)cpubound, 2048, 50,"cpuboundD", 1, CONSOLE));
+  resume(create((void *)cpubound, 2048, 50,"cpuboundE", 1, CONSOLE));
 
 
   sleep(3);  
