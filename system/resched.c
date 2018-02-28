@@ -24,7 +24,8 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
 
 	ptold = &proctab[currpid];
   ptold->prcputot += clkmilli - ptold->prctxswbeg; /* CPU ms elapsed time */
-  ptold->prprio = MAXPRIO - ptold->prcputot;
+  if (currpid != 0)
+    ptold->prprio = MAXPRIO - ptold->prcputot;
 
 	if (ptold->prstate == PR_CURR) {  /* Process remains eligible */
 		if (ptold->prprio > firstkey(readylist)) {
