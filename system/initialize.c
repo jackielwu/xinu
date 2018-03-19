@@ -172,7 +172,69 @@ static	void	sysinit()
 	for (i = 0; i < NDEVS; i++) {
 		init(i);
 	}
-	return;
+  xts_conf[PRIO_LEVEL];
+	for (i = 0; i < PRIO_LEVEL; i++)
+  {
+      
+      xts_conf[i].xts_exp = (i>=10)?i-10:0;
+      if ( i < 10)
+      {
+        xts_conf[i].xts_quantum = 200;
+        xts_conf[i].xts_slpret = 50;
+      }
+      else if ( i < 20)
+      {
+        xts_conf[i].xts_quantum = 160;
+        xts_conf[i].xts_slpret = 51;
+      }
+      else if ( i < 30)
+      {
+        xts_conf[i].xts_quantum = 120;
+        xts_conf[i].xts_slpret = 52;
+      }
+      else if ( i < 35)
+      {
+        xts_conf[i].xts_quantum = 80;
+        xts_conf[i].xts_slpret = 53;
+      }
+      else if ( i < 40)
+      {
+        xts_conf[i].xts_quantum = 80;
+        xts_conf[i].xts_slpret = 54;
+      }
+      else if ( i < 45)
+      {
+        xts_conf[i].xts_quantum = 40;
+        xts_conf[i].xts_slpret = 55;
+      }
+      else if ( i == 45)
+      {
+        xts_conf[i].xts_quantum = 40;
+        xts_conf[i].xts_slpret = 56;
+      }
+      else if ( i == 46)
+      {
+        xts_conf[i].xts_quantum = 40;
+        xts_conf[i].xts_slpret = 57;
+      }
+      else if ( i == 47)
+      {
+        xts_conf[i].xts_quantum = 40;
+        xts_conf[i].xts_slpret = 58;
+      }
+      else if ( i < 59)
+      {
+        xts_conf[i].xts_quantum = 40;
+        xts_conf[i].xts_slpret = 58;
+      }
+      else {
+        xts_conf[i].xts_quantum = 20;
+        xts_conf[i].xts_slpret = 59;
+      }
+
+  }
+  
+  return;
 }
 
 int32	stop(char *s)
