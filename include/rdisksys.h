@@ -29,7 +29,7 @@
 #define	RD_IDLEN	64		/* Size of a remote disk ID	*/
 #define	RD_BUFFS	64		/* Number of disk buffers	*/
 #define	RD_STACK	16384		/* Stack size for comm. process	*/
-#define	RD_PRIO		200		/* Priorty of comm. process	*/
+#define	RD_PRIO		59		/* Priorty of comm. process	*/
 
 /* Constants for state of the device */
 
