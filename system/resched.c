@@ -26,27 +26,49 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
   ptold->prcputot += clkmilli - ptold->prctxswbeg; /* CPU ms elapsed time */
   
   /* null process cannot be modified */
+  /*  
   if (currpid != 0)
     ptold->prprio = MAXPRIO - ptold->prcputot;
-
+  */
 	if (ptold->prstate == PR_CURR) {  /* Process remains eligible */
-		if (ptold->prprio > firstkey(readylist)) {
+		/*if (ptold->prprio > firstkey(readylist)) {
 			return;
-		}
+		}*/
+    if (preempt == 0)
+    {
+      ptold->prprio = xtsconf[ptold->prprio].xts_tqexp;
+      preempt = xtsconf[ptold->prprio].xts_quantum;
+      ptold->prstate = PR_READY;
+      xts_enqueue(currpid, ptold->prprio);
+    }
+    /* wake interupt */
+    else
+    {
+        return;
+    }
 
 		/* Old process will no longer remain current */
-
+    /*
 		ptold->prstate = PR_READY;
 		insert(currpid, readylist, ptold->prprio);
+    */
 	}
+  else
+  {
+    /* IO BOUND */
+    ptold->prprio = xtsconf[ptold->prprio].xts_slpret;
+    preempt = xtsconf[ptold->prprio].xts_quantum;
+  }
 
 	/* Force context switch to highest priority ready process */
 
-	currpid = dequeue(readylist);
+	//currpid = dequeue(readylist);
+  currpid = xts_dequeue();
+
 	ptnew = &proctab[currpid];
 	ptnew->prstate = PR_CURR;
 	ptnew->prctxswbeg = clkmilli; /* Save clk ms begin ctxsw */
-  preempt = QUANTUM;		/* Reset time slice for process	*/
+  //preempt = QUANTUM;		/* Reset time slice for process	*/
 	ctxsw(&ptold->prstkptr, &ptnew->prstkptr);
 
 	/* Old process returns here when resumed */

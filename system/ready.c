@@ -24,7 +24,7 @@ status	ready(
 	prptr->prstate = PR_READY;
 	//insert(pid, readylist, prptr->prprio);
   /* lab 4 readylist */ 
-  enqueue(pid, prptr->prprio);	
+  xts_enqueue(pid, prptr->prprio);	
   
   resched();
 

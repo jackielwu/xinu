@@ -10,8 +10,8 @@ void cpubound()
       char dest[50];
       memcpy(dest, src, strlen(src)+1);
       i * j;
-      kprintf("PID: %u\tOuter: %d\tPRCPUTOT: %u\n", currpid, i, proctab[currpid].prcputot);
+      kprintf("PID: %2d\tOuter: %d\tPRCPUTOT: %u\n", currpid, i, proctab[currpid].prcputot);
     }
   }
-  kprintf("PID: %u\tPRCPUTOT: %u\tPRPRIO: %d\tPREEMPT: %d\n", currpid, getcputot(currpid), proctab[currpid].prprio, preempt);
+  kprintf("PID: %2d\tPRCPUTOT: %u\tPRPRIO: %d\tPREEMPT: %d\n", currpid, getcputot(currpid), proctab[currpid].prprio, preempt);
 }
