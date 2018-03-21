@@ -43,7 +43,8 @@ void	clkhandler()
 	/*   remaining time reaches zero			     */
 
 	if((--preempt) <= 0) {
-		preempt = QUANTUM;
+		//preempt = QUANTUM;
+    // Lab 4 mlfbq
 		resched();
 	}
 }

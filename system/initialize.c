@@ -20,7 +20,8 @@ extern	void meminit(void);	/* Initializes the free memory list	*/
 struct	procent	proctab[NPROC];	/* Process table			*/
 struct	sentry	semtab[NSEM];	/* Semaphore table			*/
 struct	memblk	memlist;	/* List of free memory blocks		*/
-
+struct  xts_tab xts_conf[PRIO_LEVELS];
+struct  xts_multifb xts_ready[PRIO_LEVELS];
 /* Active system status */
 
 int	prcount;		/* Total number of live processes	*/
@@ -134,6 +135,8 @@ static	void	sysinit()
 		prptr->prname[0] = NULLCH;
 		prptr->prstkbase = NULL;
 		prptr->prprio = 0;
+    prptr->prcputot = 0;
+    prptr->prctxswbeg = 0;
 	}
 
 	/* Initialize the Null process entry */	
@@ -172,11 +175,11 @@ static	void	sysinit()
 	for (i = 0; i < NDEVS; i++) {
 		init(i);
 	}
-  xts_conf[PRIO_LEVEL];
-	for (i = 0; i < PRIO_LEVEL; i++)
+  
+  for (i = 0; i < PRIO_LEVELS; i++)
   {
       
-      xts_conf[i].xts_exp = (i>=10)?i-10:0;
+      xts_conf[i].xts_tqexp = (i>=10)?i-10:0;
       if ( i < 10)
       {
         xts_conf[i].xts_quantum = 200;
@@ -233,7 +236,12 @@ static	void	sysinit()
       }
 
   }
-  
+  for ( i = 0; i < PRIO_LEVELS; i++)
+  {
+    xts_ready[i].status = 0;
+    xts_ready[i].queue_head = newqueue();
+    xts_ready[i].queue_tail = queuetaiL(xts_ready[i].queue_head);
+  } 
   return;
 }
 

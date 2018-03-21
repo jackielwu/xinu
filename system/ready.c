@@ -22,8 +22,11 @@ status	ready(
 
 	prptr = &proctab[pid];
 	prptr->prstate = PR_READY;
-	insert(pid, readylist, prptr->prprio);
-	resched();
+	//insert(pid, readylist, prptr->prprio);
+  /* lab 4 readylist */ 
+  enqueue(pid, prptr->prprio);	
+  
+  resched();
 
 	return OK;
 }

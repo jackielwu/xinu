@@ -15,11 +15,12 @@ syscall getcputot(pid32 pid)
 
   if (currpid == pid) {
     restore(mask);
+    prptr->prcputot += clkmilli - prptr->prctxswbeg;
     return prptr->prcputot;
   }
   else {
     restore(mask);
-    return OK;
+    return prptr->prcputot;
   }
 
 }

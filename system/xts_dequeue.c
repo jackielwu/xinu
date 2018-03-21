@@ -3,11 +3,12 @@
 pid32 xts_dequeue(void)
 {
   pri16 p = xts_priochk();
-  if (isempty(p))
+  if (isempty(xts_ready[p].queue_head))
   {
     return EMPTY;
   }
-  pid32 pid = getfirst(p);
+  pid32 pid = getfirst(xts_ready[p].queue_head);
+  xts_ready[p].status = !isempty(xts_ready[p].queue_head);
   queuetab[pid].qprev = EMPTY;
   queuetab[pid].qnext = EMPTY;
   
