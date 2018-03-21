@@ -17,15 +17,14 @@ process	main(void)
 	kprintf("\nYou can do something else, or do nothing; it's completely up to you.\n");
 	kprintf("\n...creating a shell\n");
 
-  cputest();
-  sleepms(15);
-  iotest();
-  sleepms(15);
-  mixedtest();
   
   recvclr();
   
-
+  cputest();
+  sleep(15);
+  iotest();
+  sleep(15);
+  mixedtest();
   
   /* Problem 3*/
   /*  

@@ -36,14 +36,15 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
 		}*/
     if (preempt == 0)
     {
-      ptold->prprio = xtsconf[ptold->prprio].xts_tqexp;
-      preempt = xtsconf[ptold->prprio].xts_quantum;
+      ptold->prprio = xts_conf[ptold->prprio].xts_tqexp;
+      preempt = xts_conf[ptold->prprio].xts_quantum;
       ptold->prstate = PR_READY;
       xts_enqueue(currpid, ptold->prprio);
     }
     /* wake interupt */
     else
     {
+        kprintf("sleep\n");
         return;
     }
 
@@ -56,8 +57,8 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
   else
   {
     /* IO BOUND */
-    ptold->prprio = xtsconf[ptold->prprio].xts_slpret;
-    preempt = xtsconf[ptold->prprio].xts_quantum;
+    ptold->prprio = xts_conf[ptold->prprio].xts_slpret;
+    preempt = xts_conf[ptold->prprio].xts_quantum;
   }
 
 	/* Force context switch to highest priority ready process */

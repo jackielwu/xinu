@@ -8,8 +8,8 @@ int xts_enqueue(pid32 pid, pri16 prio)
   if (xts_ready[prio].status == 0)
   {
     xts_ready[prio].status = 1;
-    xts_ready[prio].queue_head = queuehead(prio);
-    xts_ready[prio].queue_tail = queuetail(prio);
+    //xts_ready[prio].queue_head = queuehead(prio);
+    //xts_ready[prio].queue_tail = queuetail(prio);
   }
   int tail, prev;
   tail = xts_ready[prio].queue_tail;

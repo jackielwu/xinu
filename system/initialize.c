@@ -79,11 +79,11 @@ void	nulluser()
 	enable();
 
 	/* Create a process to execute function main() */
-
+  //kprintf("main\n");
 	resume (
 	   create((void *)main, INITSTK, INITPRIO, "Main process", 0,
            NULL));
-
+  //kprintf("main done\n");
 	/* Become the Null process (i.e., guarantee that the CPU has	*/
 	/*  something to run when no other process is ready to execute)	*/
   halt();
@@ -175,7 +175,7 @@ static	void	sysinit()
 	for (i = 0; i < NDEVS; i++) {
 		init(i);
 	}
-  
+  //kprintf("init tab\n");
   for (i = 0; i < PRIO_LEVELS; i++)
   {
       
@@ -240,7 +240,7 @@ static	void	sysinit()
   {
     xts_ready[i].status = 0;
     xts_ready[i].queue_head = newqueue();
-    xts_ready[i].queue_tail = queuetaiL(xts_ready[i].queue_head);
+    xts_ready[i].queue_tail = queuetail(xts_ready[i].queue_head);
   } 
   return;
 }
