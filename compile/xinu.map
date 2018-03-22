@@ -116,898 +116,899 @@ Linker script and memory map
                 0x00000000001011ac                getbuf
  .text          0x000000000010121a       0x56 binaries/getc.o
                 0x000000000010121a                getc
- .text          0x0000000000101270       0x84 binaries/getcpuused.o
+ .text          0x0000000000101270       0x8d binaries/getcpuused.o
                 0x0000000000101270                getcputot
- .text          0x00000000001012f4       0x69 binaries/getdev.o
-                0x00000000001012f4                getdev
- .text          0x000000000010135d       0x82 binaries/getitem.o
-                0x000000000010135d                getitem
-                0x000000000010138c                getfirst
-                0x00000000001013b3                getlast
- .text          0x00000000001013df       0xc2 binaries/getmem.o
-                0x00000000001013df                getmem
- .text          0x00000000001014a1        0xa binaries/getpid.o
-                0x00000000001014a1                getpid
- .text          0x00000000001014ab       0x54 binaries/getprio.o
-                0x00000000001014ab                getprio
- .text          0x00000000001014ff       0xab binaries/getstk.o
-                0x00000000001014ff                getstk
- .text          0x00000000001015aa       0x32 binaries/gettime.o
-                0x00000000001015aa                gettime
- .text          0x00000000001015dc      0x186 binaries/getutime.o
-                0x00000000001015dc                getutime
- .text          0x0000000000101762      0x222 binaries/gocreate.o
-                0x0000000000101762                gocreate
- .text          0x0000000000101984        0xa binaries/host2neta.o
-                0x0000000000101984                host2neta
- .text          0x000000000010198e       0x56 binaries/init.o
-                0x000000000010198e                init
- .text          0x00000000001019e4      0x360 binaries/initialize.o
-                0x00000000001019e4                nulluser
-                0x0000000000101cfa                stop
-                0x0000000000101d1e                delay
- .text          0x0000000000101d44       0x98 binaries/insert.o
-                0x0000000000101d44                insert
- .text          0x0000000000101ddc       0xe8 binaries/insertd.o
-                0x0000000000101ddc                insertd
- .text          0x0000000000101ec4       0x88 binaries/iobound.o
-                0x0000000000101ec4                iobound
- .text          0x0000000000101f4c        0xa binaries/ioerr.o
-                0x0000000000101f4c                ioerr
- .text          0x0000000000101f56        0xa binaries/ionull.o
-                0x0000000000101f56                ionull
- .text          0x0000000000101f60       0xc6 binaries/iotest.o
-                0x0000000000101f60                iotest
- .text          0x0000000000102026      0x158 binaries/kill.o
-                0x0000000000102026                kill
- .text          0x000000000010217e       0xbf binaries/kprintf.o
-                0x000000000010217e                kputc
-                0x00000000001021b0                console_init
-                0x00000000001021e3                kgetc
-                0x0000000000102209                kprintf
- .text          0x000000000010223d       0x86 binaries/main.o
-                0x000000000010223d                main
- .text          0x00000000001022c3       0x99 binaries/mark.o
-                0x00000000001022c3                markinit
-                0x00000000001022e4                mark
- .text          0x000000000010235c      0x1cc binaries/meminit.o
-                0x000000000010235c                meminit
-                0x00000000001024b6                setsegs
- .text          0x0000000000102528       0xec binaries/mixedtest.o
-                0x0000000000102528                mixedtest
- .text          0x0000000000102614      0x122 binaries/mkbufpool.o
-                0x0000000000102614                mkbufpool
- .text          0x0000000000102736       0x63 binaries/newqueue.o
-                0x0000000000102736                newqueue
- .text          0x0000000000102799       0x23 binaries/onandon.o
-                0x0000000000102799                onandon
- .text          0x00000000001027bc       0x5c binaries/open.o
-                0x00000000001027bc                open
- .text          0x0000000000102818       0x20 binaries/panic.o
-                0x0000000000102818                panic
- .text          0x0000000000102838      0x282 binaries/pci.o
-                0x0000000000102838                pci_init
-                0x0000000000102842                find_pci_device
-                0x0000000000102901                pci_read_config_byte
-                0x000000000010293f                pci_read_config_word
-                0x000000000010297f                pci_read_config_dword
-                0x00000000001029bd                pci_write_config_byte
-                0x00000000001029f9                pci_write_config_word
-                0x0000000000102a36                pci_write_config_dword
-                0x0000000000102a72                pci_get_dev_mmio_base_addr
- .text          0x0000000000102aba       0x50 binaries/platinit.o
-                0x0000000000102aba                platinit
- .text          0x0000000000102b0a       0xa7 binaries/prnsegadd.o
-                0x0000000000102b0a                prnsegadd
- .text          0x0000000000102bb1       0xa9 binaries/ptclear.o
-                0x0000000000102bb1                _ptclear
- .text          0x0000000000102c5a       0x85 binaries/ptcount.o
-                0x0000000000102c5a                ptcount
- .text          0x0000000000102cdf       0xea binaries/ptcreate.o
-                0x0000000000102cdf                ptcreate
- .text          0x0000000000102dc9       0x63 binaries/ptdelete.o
-                0x0000000000102dc9                ptdelete
- .text          0x0000000000102e2c       0x8b binaries/ptinit.o
-                0x0000000000102e2c                ptinit
- .text          0x0000000000102eb7       0xf5 binaries/ptrecv.o
-                0x0000000000102eb7                ptrecv
- .text          0x0000000000102fac       0x66 binaries/ptreset.o
-                0x0000000000102fac                ptreset
- .text          0x0000000000103012      0x115 binaries/ptsend.o
-                0x0000000000103012                ptsend
- .text          0x0000000000103127       0x64 binaries/putc.o
-                0x0000000000103127                putc
- .text          0x000000000010318b       0xb3 binaries/quark_irq.o
-                0x000000000010318b                quark_irq_routing
- .text          0x000000000010323e      0x19c binaries/quark_pdat.o
-                0x000000000010323e                get_quark_pdat_entry_data_by_id
-                0x0000000000103309                get_quark_pdat_entry_data_by_desc
- .text          0x00000000001033da       0xae binaries/queue.o
-                0x00000000001033da                enqueue
-                0x000000000010343d                dequeue
- .text          0x0000000000103488       0x5c binaries/read.o
-                0x0000000000103488                read
- .text          0x00000000001034e4       0x59 binaries/ready.o
-                0x00000000001034e4                ready
- .text          0x000000000010353d       0x5a binaries/receive.o
-                0x000000000010353d                receive
- .text          0x0000000000103597       0x42 binaries/recvclr.o
-                0x0000000000103597                recvclr
- .text          0x00000000001035d9       0xad binaries/recvtime.o
-                0x00000000001035d9                recvtime
- .text          0x0000000000103686      0x175 binaries/resched.o
-                0x0000000000103686                resched
-                0x0000000000103789                resched_cntl
- .text          0x00000000001037fb       0x7e binaries/resume.o
-                0x00000000001037fb                resume
- .text          0x0000000000103879       0x59 binaries/seek.o
-                0x0000000000103879                seek
- .text          0x00000000001038d2       0x51 binaries/semcount.o
-                0x00000000001038d2                semcount
- .text          0x0000000000103923       0x8f binaries/semcreate.o
-                0x0000000000103923                semcreate
- .text          0x00000000001039b2       0xcc binaries/semdelete.o
-                0x00000000001039b2                semdelete
- .text          0x0000000000103a7e       0xa8 binaries/semreset.o
-                0x0000000000103a7e                semreset
- .text          0x0000000000103b26       0xb3 binaries/send.o
-                0x0000000000103b26                send
- .text          0x0000000000103bd9       0x95 binaries/signal.o
-                0x0000000000103bd9                signal
- .text          0x0000000000103c6e       0xba binaries/signaln.o
-                0x0000000000103c6e                signaln
- .text          0x0000000000103d28       0xc0 binaries/sleep.o
-                0x0000000000103d28                sleepms
-                0x0000000000103db2                sleep
- .text          0x0000000000103de8        0xd binaries/stackoverflowA.o
-                0x0000000000103de8                stackoverflowA
- .text          0x0000000000103df5       0x23 binaries/stackoverflowB.o
-                0x0000000000103df5                stackoverflowB
- .text          0x0000000000103e18       0xac binaries/suspend.o
-                0x0000000000103e18                suspend
- .text          0x0000000000103ec4       0x3a binaries/testloop.o
-                0x0000000000103ec4                testloop
- .text          0x0000000000103efe       0x91 binaries/unsleep.o
-                0x0000000000103efe                unsleep
- .text          0x0000000000103f8f       0x19 binaries/userret.o
-                0x0000000000103f8f                userret
- .text          0x0000000000103fa8       0xaa binaries/wait.o
-                0x0000000000103fa8                wait
- .text          0x0000000000104052       0x71 binaries/wakeup.o
-                0x0000000000104052                wakeup
- .text          0x00000000001040c3       0x5c binaries/write.o
-                0x00000000001040c3                write
- .text          0x000000000010411f       0x1a binaries/xdone.o
-                0x000000000010411f                xdone
- .text          0x0000000000104139       0x6c binaries/xts_dequeue.o
-                0x0000000000104139                xts_dequeue
- .text          0x00000000001041a5       0x82 binaries/xts_enqueue.o
-                0x00000000001041a5                xts_enqueue
- .text          0x0000000000104227       0x35 binaries/xts_priochk.o
-                0x0000000000104227                xts_priochk
- .text          0x000000000010425c       0x26 binaries/yield.o
-                0x000000000010425c                yield
- .text          0x0000000000104282       0x11 binaries/abs.o
-                0x0000000000104282                abs
- .text          0x0000000000104293       0x80 binaries/atoi.o
-                0x0000000000104293                atoi
- .text          0x0000000000104313       0x80 binaries/atol.o
-                0x0000000000104313                atol
- .text          0x0000000000104393       0x1a binaries/bzero.o
-                0x0000000000104393                bzero
- .text          0x00000000001043ad        0x0 binaries/ctype_.o
- .text          0x00000000001043ad      0x6ad binaries/doprnt.o
-                0x0000000000104500                _doprnt
- .text          0x0000000000104a5a      0x5e5 binaries/doscan.o
-                0x0000000000104a5a                _doscan
- .text          0x000000000010503f      0x64e binaries/fdoprnt.o
-                0x00000000001050c4                _fdoprnt
- .text          0x000000000010568d       0x1c binaries/fgetc.o
-                0x000000000010568d                fgetc
- .text          0x00000000001056a9       0x5b binaries/fgets.o
-                0x00000000001056a9                fgets
- .text          0x0000000000105704       0x21 binaries/fprintf.o
-                0x0000000000105704                fprintf
- .text          0x0000000000105725       0x27 binaries/fputc.o
-                0x0000000000105725                fputc
- .text          0x000000000010574c       0x3a binaries/fputs.o
-                0x000000000010574c                fputs
- .text          0x0000000000105786       0x6a binaries/fscanf.o
-                0x00000000001057c4                fscanf
- .text          0x00000000001057f0       0x1d binaries/getchar.o
-                0x00000000001057f0                getchar
- .text          0x000000000010580d       0x11 binaries/labs.o
-                0x000000000010580d                labs
- .text          0x000000000010581e       0x36 binaries/memchr.o
-                0x000000000010581e                memchr
- .text          0x0000000000105854       0x4a binaries/memcmp.o
-                0x0000000000105854                memcmp
- .text          0x000000000010589e       0x26 binaries/memcpy.o
-                0x000000000010589e                memcpy
- .text          0x00000000001058c4       0x1f binaries/memset.o
-                0x00000000001058c4                memset
- .text          0x00000000001058e3       0x2e binaries/printf.o
-                0x00000000001058e3                printf
- .text          0x0000000000105911       0x20 binaries/putchar.o
-                0x0000000000105911                putchar
- .text          0x0000000000105931      0x1d0 binaries/qsort.o
-                0x0000000000105ad9                qsort
- .text          0x0000000000105b01       0x4c binaries/rand.o
-                0x0000000000105b01                srand
-                0x0000000000105b0e                rand
- .text          0x0000000000105b4d       0x48 binaries/sprintf.o
-                0x0000000000105b66                sprintf
- .text          0x0000000000105b95       0x5a binaries/sscanf.o
-                0x0000000000105bc5                sscanf
- .text          0x0000000000105bef       0x2f binaries/strchr.o
-                0x0000000000105bef                strchr
- .text          0x0000000000105c1e       0x45 binaries/strcmp.o
-                0x0000000000105c1e                strcmp
- .text          0x0000000000105c63       0x1c binaries/strcpy.o
-                0x0000000000105c63                strcpy
- .text          0x0000000000105c7f       0x20 binaries/strlen.o
-                0x0000000000105c7f                strlen
- .text          0x0000000000105c9f       0x3d binaries/strncat.o
-                0x0000000000105c9f                strncat
- .text          0x0000000000105cdc       0x3b binaries/strncmp.o
-                0x0000000000105cdc                strncmp
- .text          0x0000000000105d17       0x59 binaries/strncpy.o
-                0x0000000000105d17                strncpy
- .text          0x0000000000105d70       0x38 binaries/strnlen.o
-                0x0000000000105d70                strnlen
- .text          0x0000000000105da8       0x32 binaries/strrchr.o
-                0x0000000000105da8                strrchr
- .text          0x0000000000105dda       0x68 binaries/strstr.o
-                0x0000000000105dda                strstr
- .text          0x0000000000105e42      0x112 binaries/ttycontrol.o
-                0x0000000000105e42                ttycontrol
- .text          0x0000000000105f54       0xb0 binaries/ttygetc.o
-                0x0000000000105f54                ttygetc
- .text          0x0000000000106004      0x4aa binaries/ttyhandle_in.o
-                0x00000000001060c8                ttyhandle_in
- .text          0x00000000001064ae      0x158 binaries/ttyhandle_out.o
-                0x00000000001064ae                ttyhandle_out
- .text          0x0000000000106606       0x85 binaries/ttyhandler.o
-                0x0000000000106606                ttyhandler
- .text          0x000000000010668b      0x15d binaries/ttyinit.o
-                0x000000000010668b                ttyinit
- .text          0x00000000001067e8        0xf binaries/ttykickout.o
-                0x00000000001067e8                ttykickout
- .text          0x00000000001067f7       0xb2 binaries/ttyputc.o
-                0x00000000001067f7                ttyputc
- .text          0x00000000001068a9       0xfd binaries/ttyread.o
-                0x00000000001068a9                ttyread
- .text          0x00000000001069a6       0x4d binaries/ttywrite.o
-                0x00000000001069a6                ttywrite
- .text          0x00000000001069f3      0x129 binaries/mount.o
-                0x00000000001069f3                namlen
-                0x0000000000106a2f                mount
- .text          0x0000000000106b1c      0x1c4 binaries/naminit.o
-                0x0000000000106b1c                naminit
- .text          0x0000000000106ce0      0x1fe binaries/nammap.o
-                0x0000000000106ce0                namrepl
-                0x0000000000106e03                namcpy
-                0x0000000000106e51                nammap
- .text          0x0000000000106ede       0x44 binaries/namopen.o
-                0x0000000000106ede                namopen
- .text          0x0000000000106f22       0xd8 binaries/colon2mac.o
-                0x0000000000106f22                colon2mac
- .text          0x0000000000106ffa       0x7d binaries/ethcontrol.o
-                0x0000000000106ffa                ethcontrol
- .text          0x0000000000107077      0x16e binaries/ethhandler.o
-                0x0000000000107077                ethhandler
- .text          0x00000000001071e5      0x51d binaries/ethinit.o
-                0x00000000001071e5                eth_phy_read
-                0x0000000000107225                eth_phy_write
-                0x0000000000107266                eth_phy_reset
-                0x0000000000107340                ethinit
- .text          0x0000000000107702       0xef binaries/ethmcast.o
-                0x0000000000107702                ethmcast_add
-                0x000000000010774e                ethmcast_remove
- .text          0x00000000001077f1      0x14c binaries/ethread.o
-                0x00000000001077f1                ethread
- .text          0x000000000010793d       0xc1 binaries/ethwrite.o
-                0x000000000010793d                ethwrite
- .text          0x00000000001079fe       0x68 binaries/rdsbufalloc.o
-                0x00000000001079fe                rdsbufalloc
- .text          0x0000000000107a66       0xce binaries/rdsclose.o
-                0x0000000000107a66                rdsclose
- .text          0x0000000000107b34      0x1e3 binaries/rdscomm.o
-                0x0000000000107b34                rdscomm
- .text          0x0000000000107d17      0x1c4 binaries/rdscontrol.o
-                0x0000000000107d17                rdscontrol
- .text          0x0000000000107edb      0x1e0 binaries/rdsinit.o
-                0x0000000000107edb                rdsinit
- .text          0x00000000001080bb      0x199 binaries/rdsopen.o
-                0x00000000001080bb                rdsopen
- .text          0x0000000000108254      0x2b7 binaries/rdsprocess.o
-                0x0000000000108254                rdsprocess
- .text          0x000000000010850b      0x1d8 binaries/rdsread.o
-                0x000000000010850b                rdsread
- .text          0x00000000001086e3      0x1ae binaries/rdswrite.o
-                0x00000000001086e3                rdswrite
- .text          0x0000000000108891        0xa binaries/ramclose.o
-                0x0000000000108891                ramclose
- .text          0x000000000010889b       0x35 binaries/raminit.o
-                0x000000000010889b                raminit
- .text          0x00000000001088d0        0xa binaries/ramopen.o
-                0x00000000001088d0                ramopen
- .text          0x00000000001088da       0x26 binaries/ramread.o
-                0x00000000001088da                ramread
- .text          0x0000000000108900       0x26 binaries/ramwrite.o
-                0x0000000000108900                ramwrite
- .text          0x0000000000108926       0x87 binaries/lfdballoc.o
-                0x0000000000108926                lfdballoc
- .text          0x00000000001089ad       0x49 binaries/lfdbfree.o
-                0x00000000001089ad                lfdbfree
- .text          0x00000000001089f6       0xa1 binaries/lfflush.o
-                0x00000000001089f6                lfflush
- .text          0x0000000000108a97       0x82 binaries/lfgetmode.o
-                0x0000000000108a97                lfgetmode
- .text          0x0000000000108b19       0x60 binaries/lfiballoc.o
-                0x0000000000108b19                lfiballoc
- .text          0x0000000000108b79       0x27 binaries/lfibclear.o
-                0x0000000000108b79                lfibclear
- .text          0x0000000000108ba0       0x6c binaries/lfibget.o
-                0x0000000000108ba0                lfibget
- .text          0x0000000000108c0c       0x88 binaries/lfibput.o
-                0x0000000000108c0c                lfibput
- .text          0x0000000000108c94       0xa4 binaries/lflclose.o
-                0x0000000000108c94                lflclose
- .text          0x0000000000108d38       0xc2 binaries/lflcontrol.o
-                0x0000000000108d38                lflcontrol
- .text          0x0000000000108dfa       0xfb binaries/lflgetc.o
-                0x0000000000108dfa                lflgetc
- .text          0x0000000000108ef5       0xe7 binaries/lflinit.o
-                0x0000000000108ef5                lflinit
- .text          0x0000000000108fdc      0x125 binaries/lflputc.o
-                0x0000000000108fdc                lflputc
- .text          0x0000000000109101       0x6b binaries/lflread.o
-                0x0000000000109101                lflread
- .text          0x000000000010916c       0xbd binaries/lflseek.o
-                0x000000000010916c                lflseek
- .text          0x0000000000109229       0x52 binaries/lflwrite.o
-                0x0000000000109229                lflwrite
- .text          0x000000000010927b      0x114 binaries/lfsckfmt.o
-                0x000000000010927b                lfsckfmt
- .text          0x000000000010938f      0x1e6 binaries/lfscreate.o
-                0x000000000010938f                lfscreate
- .text          0x0000000000109575      0x1b1 binaries/lfsetup.o
-                0x0000000000109575                lfsetup
- .text          0x0000000000109726       0x45 binaries/lfsinit.o
-                0x0000000000109726                lfsinit
- .text          0x000000000010976b      0x2fe binaries/lfsopen.o
-                0x000000000010976b                lfsopen
- .text          0x0000000000109a69      0x112 binaries/lftruncate.o
-                0x0000000000109a69                lftruncate
- .text          0x0000000000109b7b       0x69 binaries/rflclose.o
-                0x0000000000109b7b                rflclose
- .text          0x0000000000109be4       0x29 binaries/rflgetc.o
-                0x0000000000109be4                rflgetc
- .text          0x0000000000109c0d       0x6c binaries/rflinit.o
-                0x0000000000109c0d                rflinit
- .text          0x0000000000109c79       0x29 binaries/rflputc.o
-                0x0000000000109c79                rflputc
- .text          0x0000000000109ca2      0x2ba binaries/rflread.o
-                0x0000000000109ca2                rflread
- .text          0x0000000000109f5c       0x68 binaries/rflseek.o
-                0x0000000000109f5c                rflseek
- .text          0x0000000000109fc4      0x2fa binaries/rflwrite.o
-                0x0000000000109fc4                rflwrite
- .text          0x000000000010a2be      0x17c binaries/rfscomm.o
-                0x000000000010a2be                rfscomm
- .text          0x000000000010a43a      0x22b binaries/rfscontrol.o
-                0x000000000010a43a                rfscontrol
- .text          0x000000000010a665       0x82 binaries/rfsgetmode.o
-                0x000000000010a665                rfsgetmode
- .text          0x000000000010a6e7       0x7e binaries/rfsinit.o
-                0x000000000010a6e7                rfsinit
- .text          0x000000000010a765       0xad binaries/rfsndmsg.o
-                0x000000000010a765                rfsndmsg
- .text          0x000000000010a812      0x243 binaries/rfsopen.o
-                0x000000000010a812                rfsopen
- .text          0x000000000010aa55      0x626 binaries/arp.o
-                0x000000000010aa55                arp_init
-                0x000000000010aa71                arp_alloc
-                0x000000000010ab18                arp_ntoh
-                0x000000000010ab85                arp_hton
-                0x000000000010abf2                arp_resolve
-                0x000000000010ae43                arp_in
- .text          0x000000000010b07b      0x5e3 binaries/dhcp.o
-                0x000000000010b07b                dhcp_get_opt_val
-                0x000000000010b0cf                dhcp_bld_bootp_msg
-                0x000000000010b1a1                dhcp_bld_disc
-                0x000000000010b1f3                dhcp_bld_req
-                0x000000000010b28e                getlocalip
- .text          0x000000000010b65e       0xdf binaries/dot2ip.o
-                0x000000000010b65e                dot2ip
- .text          0x000000000010b73d      0x38c binaries/hexdump.o
-                0x000000000010b73d                hexdump
-                0x000000000010b897                hexadump
- .text          0x000000000010bac9      0x6eb binaries/icmp.o
-                0x000000000010bac9                icmp_init
-                0x000000000010bae5                icmp_register
-                0x000000000010bba3                icmp_recv
-                0x000000000010bd46                icmp_mkpkt
-                0x000000000010be13                icmp_in
-                0x000000000010bfab                icmp_send
-                0x000000000010c01a                icmp_release
-                0x000000000010c12c                icmp_cksum
-                0x000000000010c186                icmp_hton
-                0x000000000010c19d                icmp_ntoh
- .text          0x000000000010c1b4      0x5dc binaries/ip.o
-                0x000000000010c1b4                ip_local
-                0x000000000010c1f4                ipcksum
-                0x000000000010c244                ip_ntoh
-                0x000000000010c2b1                ip_in
-                0x000000000010c3d6                ip_hton
-                0x000000000010c443                ip_out
-                0x000000000010c4f9                ip_send
-                0x000000000010c605                ipout
-                0x000000000010c6f8                ip_enqueue
- .text          0x000000000010c790      0x1b2 binaries/net.o
-                0x000000000010c790                net_init
-                0x000000000010c887                eth_hton
-                0x000000000010c894                eth_ntoh
-                0x000000000010c8a1                netin
- .text          0x000000000010c942       0xb9 binaries/netstart.o
-                0x000000000010c942                netstart
- .text          0x000000000010c9fb      0xa30 binaries/pdump.o
-                0x000000000010c9fb                pdump
-                0x000000000010cfe0                pdumph
- .text          0x000000000010d42b      0x5c4 binaries/tftp.o
-                0x000000000010d42b                tftp_send1
-                0x000000000010d53f                tftpget_mb
-                0x000000000010d9cc                tftpget
- .text          0x000000000010d9ef      0xa10 binaries/udp.o
-                0x000000000010d9ef                udp_init
-                0x000000000010da30                udp_in
-                0x000000000010db59                udp_register
-                0x000000000010dc6a                udp_recv
-                0x000000000010de04                udp_recvaddr
-                0x000000000010dfb2                udp_send
-                0x000000000010e160                udp_sendto
-                0x000000000010e2c9                udp_release
-                0x000000000010e3d1                udp_ntoh
-                0x000000000010e3e8                udp_hton
- .text          0x000000000010e3ff      0x10e binaries/addargs.o
-                0x000000000010e3ff                addargs
- .text          0x000000000010e50d      0x1db binaries/lexan.o
-                0x000000000010e50d                lexan
- .text          0x000000000010e6e8      0x63d binaries/shell.o
-                0x000000000010e6e8                shell
- .text          0x000000000010ed25       0x59 binaries/xsh_argecho.o
-                0x000000000010ed25                xsh_argecho
- .text          0x000000000010ed7e      0x1fb binaries/xsh_arp.o
-                0x000000000010ed7e                xsh_arp
- .text          0x000000000010ef79      0x1db binaries/xsh_cat.o
-                0x000000000010ef79                xsh_cat
- .text          0x000000000010f154       0x4f binaries/xsh_clear.o
-                0x000000000010f154                xsh_clear
- .text          0x000000000010f1a3      0x25d binaries/xsh_date.o
-                0x000000000010f1a3                xsh_date
- .text          0x000000000010f400       0x80 binaries/xsh_devdump.o
-                0x000000000010f400                xsh_devdump
- .text          0x000000000010f480       0x63 binaries/xsh_echo.o
-                0x000000000010f480                xsh_echo
- .text          0x000000000010f4e3        0xa binaries/xsh_exit.o
-                0x000000000010f4e3                xsh_exit
- .text          0x000000000010f4ed      0x31f binaries/xsh_help.o
-                0x000000000010f4ed                xsh_help
- .text          0x000000000010f80c      0x367 binaries/xsh_ipaddr.o
-                0x000000000010f80c                xsh_ipaddr
- .text          0x000000000010fb73      0x1aa binaries/xsh_kill.o
-                0x000000000010fb73                xsh_kill
- .text          0x000000000010fd1d      0x3c0 binaries/xsh_memdump.o
-                0x000000000010fde3                xsh_memdump
- .text          0x00000000001100dd      0x1cc binaries/xsh_memstat.o
-                0x00000000001100dd                xsh_memstat
- .text          0x00000000001102a9      0x27f binaries/xsh_ping.o
-                0x00000000001102a9                xsh_ping
- .text          0x0000000000110528      0x19c binaries/xsh_ps.o
-                0x0000000000110528                xsh_ps
- .text          0x00000000001106c4      0x1a3 binaries/xsh_sleep.o
-                0x00000000001106c4                xsh_sleep
- .text          0x0000000000110867      0x1c4 binaries/xsh_udpdump.o
-                0x0000000000110867                xsh_udpdump
- .text          0x0000000000110a2b      0x3ad binaries/xsh_udpecho.o
-                0x0000000000110a2b                xsh_udpecho
- .text          0x0000000000110dd8      0x1fc binaries/xsh_udpeserver.o
-                0x0000000000110dd8                xsh_udpeserver
- .text          0x0000000000110fd4      0x1b0 binaries/xsh_uptime.o
-                0x0000000000110fd4                xsh_uptime
- .text          0x0000000000111184        0xe binaries/clkdisp.o
-                0x0000000000111184                clkdisp
- .text          0x0000000000111192       0x19 binaries/ctxsw.o
-                0x0000000000111192                ctxsw
- .text          0x00000000001111ab       0x31 binaries/host2netca.o
-                0x00000000001111ab                host2netca
- .text          0x00000000001111dc        0xa binaries/host2net.o
-                0x00000000001111dc                host2net
- .text          0x00000000001111e6      0x368 binaries/intr.o
-                0x00000000001111e6                disable
-                0x00000000001111ef                restore
-                0x00000000001111fd                enable
-                0x00000000001111ff                pause
-                0x0000000000111206                halt
-                0x0000000000111209                spurious_irq7
-                0x000000000011120e                spurious_irq15
-                0x000000000011121d                _Xint0
-                0x0000000000111228                _Xint1
-                0x0000000000111233                _Xint2
-                0x000000000011123e                _Xint3
-                0x0000000000111249                _Xint4
-                0x0000000000111254                _Xint5
-                0x000000000011125f                _Xint6
-                0x000000000011126a                _Xint7
-                0x0000000000111275                _Xint8
-                0x0000000000111280                _Xint9
-                0x000000000011128b                _Xint10
-                0x0000000000111296                _Xint11
-                0x00000000001112a4                _Xint12
-                0x00000000001112b2                _Xint13
-                0x00000000001112c0                _Xint14
-                0x00000000001112ce                _Xint15
-                0x00000000001112dc                _Xint16
-                0x00000000001112ea                _Xint17
-                0x00000000001112f8                _Xint18
-                0x0000000000111306                _Xint19
-                0x0000000000111314                _Xint20
-                0x0000000000111322                _Xint21
-                0x0000000000111330                _Xint22
-                0x000000000011133e                _Xint23
-                0x000000000011134c                _Xint24
-                0x000000000011135a                _Xint25
-                0x0000000000111368                _Xint26
-                0x0000000000111376                _Xint27
-                0x0000000000111384                _Xint28
-                0x0000000000111392                _Xint29
-                0x00000000001113a0                _Xint30
-                0x00000000001113ae                _Xint31
-                0x00000000001113bc                _Xint32
-                0x00000000001113ca                _Xint33
-                0x00000000001113d8                _Xint34
-                0x00000000001113e6                _Xint35
-                0x00000000001113f4                _Xint36
-                0x0000000000111402                _Xint37
-                0x0000000000111410                _Xint38
-                0x000000000011141e                _Xint39
-                0x000000000011142c                _Xint40
-                0x000000000011143a                _Xint41
-                0x0000000000111448                _Xint42
-                0x0000000000111456                _Xint43
-                0x0000000000111464                _Xint44
-                0x0000000000111472                _Xint45
-                0x0000000000111480                _Xint46
-                0x000000000011148e                defevec
- .text          0x000000000011154e        0xf binaries/ttydispatch.o
-                0x000000000011154e                ttydispatch
- .text          0x000000000011155d       0x13 binaries/ethdispatch.o
-                0x000000000011155d                ethdispatch
+ .text          0x00000000001012fd       0x69 binaries/getdev.o
+                0x00000000001012fd                getdev
+ .text          0x0000000000101366       0x82 binaries/getitem.o
+                0x0000000000101366                getitem
+                0x0000000000101395                getfirst
+                0x00000000001013bc                getlast
+ .text          0x00000000001013e8       0xc2 binaries/getmem.o
+                0x00000000001013e8                getmem
+ .text          0x00000000001014aa        0xa binaries/getpid.o
+                0x00000000001014aa                getpid
+ .text          0x00000000001014b4       0x54 binaries/getprio.o
+                0x00000000001014b4                getprio
+ .text          0x0000000000101508       0xab binaries/getstk.o
+                0x0000000000101508                getstk
+ .text          0x00000000001015b3       0x32 binaries/gettime.o
+                0x00000000001015b3                gettime
+ .text          0x00000000001015e5      0x186 binaries/getutime.o
+                0x00000000001015e5                getutime
+ .text          0x000000000010176b      0x222 binaries/gocreate.o
+                0x000000000010176b                gocreate
+ .text          0x000000000010198d        0xa binaries/host2neta.o
+                0x000000000010198d                host2neta
+ .text          0x0000000000101997       0x56 binaries/init.o
+                0x0000000000101997                init
+ .text          0x00000000001019ed      0x360 binaries/initialize.o
+                0x00000000001019ed                nulluser
+                0x0000000000101d03                stop
+                0x0000000000101d27                delay
+ .text          0x0000000000101d4d       0x98 binaries/insert.o
+                0x0000000000101d4d                insert
+ .text          0x0000000000101de5       0xe8 binaries/insertd.o
+                0x0000000000101de5                insertd
+ .text          0x0000000000101ecd       0x88 binaries/iobound.o
+                0x0000000000101ecd                iobound
+ .text          0x0000000000101f55        0xa binaries/ioerr.o
+                0x0000000000101f55                ioerr
+ .text          0x0000000000101f5f        0xa binaries/ionull.o
+                0x0000000000101f5f                ionull
+ .text          0x0000000000101f69       0xc6 binaries/iotest.o
+                0x0000000000101f69                iotest
+ .text          0x000000000010202f      0x158 binaries/kill.o
+                0x000000000010202f                kill
+ .text          0x0000000000102187       0xbf binaries/kprintf.o
+                0x0000000000102187                kputc
+                0x00000000001021b9                console_init
+                0x00000000001021ec                kgetc
+                0x0000000000102212                kprintf
+ .text          0x0000000000102246       0x9c binaries/main.o
+                0x0000000000102246                main
+ .text          0x00000000001022e2       0x99 binaries/mark.o
+                0x00000000001022e2                markinit
+                0x0000000000102303                mark
+ .text          0x000000000010237b      0x1cc binaries/meminit.o
+                0x000000000010237b                meminit
+                0x00000000001024d5                setsegs
+ .text          0x0000000000102547       0xec binaries/mixedtest.o
+                0x0000000000102547                mixedtest
+ .text          0x0000000000102633      0x122 binaries/mkbufpool.o
+                0x0000000000102633                mkbufpool
+ .text          0x0000000000102755       0x63 binaries/newqueue.o
+                0x0000000000102755                newqueue
+ .text          0x00000000001027b8       0x23 binaries/onandon.o
+                0x00000000001027b8                onandon
+ .text          0x00000000001027db       0x5c binaries/open.o
+                0x00000000001027db                open
+ .text          0x0000000000102837       0x20 binaries/panic.o
+                0x0000000000102837                panic
+ .text          0x0000000000102857      0x282 binaries/pci.o
+                0x0000000000102857                pci_init
+                0x0000000000102861                find_pci_device
+                0x0000000000102920                pci_read_config_byte
+                0x000000000010295e                pci_read_config_word
+                0x000000000010299e                pci_read_config_dword
+                0x00000000001029dc                pci_write_config_byte
+                0x0000000000102a18                pci_write_config_word
+                0x0000000000102a55                pci_write_config_dword
+                0x0000000000102a91                pci_get_dev_mmio_base_addr
+ .text          0x0000000000102ad9       0x50 binaries/platinit.o
+                0x0000000000102ad9                platinit
+ .text          0x0000000000102b29       0xa7 binaries/prnsegadd.o
+                0x0000000000102b29                prnsegadd
+ .text          0x0000000000102bd0       0xa9 binaries/ptclear.o
+                0x0000000000102bd0                _ptclear
+ .text          0x0000000000102c79       0x85 binaries/ptcount.o
+                0x0000000000102c79                ptcount
+ .text          0x0000000000102cfe       0xea binaries/ptcreate.o
+                0x0000000000102cfe                ptcreate
+ .text          0x0000000000102de8       0x63 binaries/ptdelete.o
+                0x0000000000102de8                ptdelete
+ .text          0x0000000000102e4b       0x8b binaries/ptinit.o
+                0x0000000000102e4b                ptinit
+ .text          0x0000000000102ed6       0xf5 binaries/ptrecv.o
+                0x0000000000102ed6                ptrecv
+ .text          0x0000000000102fcb       0x66 binaries/ptreset.o
+                0x0000000000102fcb                ptreset
+ .text          0x0000000000103031      0x115 binaries/ptsend.o
+                0x0000000000103031                ptsend
+ .text          0x0000000000103146       0x64 binaries/putc.o
+                0x0000000000103146                putc
+ .text          0x00000000001031aa       0xb3 binaries/quark_irq.o
+                0x00000000001031aa                quark_irq_routing
+ .text          0x000000000010325d      0x19c binaries/quark_pdat.o
+                0x000000000010325d                get_quark_pdat_entry_data_by_id
+                0x0000000000103328                get_quark_pdat_entry_data_by_desc
+ .text          0x00000000001033f9       0xae binaries/queue.o
+                0x00000000001033f9                enqueue
+                0x000000000010345c                dequeue
+ .text          0x00000000001034a7       0x5c binaries/read.o
+                0x00000000001034a7                read
+ .text          0x0000000000103503       0x59 binaries/ready.o
+                0x0000000000103503                ready
+ .text          0x000000000010355c       0x5a binaries/receive.o
+                0x000000000010355c                receive
+ .text          0x00000000001035b6       0x42 binaries/recvclr.o
+                0x00000000001035b6                recvclr
+ .text          0x00000000001035f8       0xad binaries/recvtime.o
+                0x00000000001035f8                recvtime
+ .text          0x00000000001036a5      0x168 binaries/resched.o
+                0x00000000001036a5                resched
+                0x000000000010379b                resched_cntl
+ .text          0x000000000010380d       0x7e binaries/resume.o
+                0x000000000010380d                resume
+ .text          0x000000000010388b       0x59 binaries/seek.o
+                0x000000000010388b                seek
+ .text          0x00000000001038e4       0x51 binaries/semcount.o
+                0x00000000001038e4                semcount
+ .text          0x0000000000103935       0x8f binaries/semcreate.o
+                0x0000000000103935                semcreate
+ .text          0x00000000001039c4       0xcc binaries/semdelete.o
+                0x00000000001039c4                semdelete
+ .text          0x0000000000103a90       0xa8 binaries/semreset.o
+                0x0000000000103a90                semreset
+ .text          0x0000000000103b38       0xb3 binaries/send.o
+                0x0000000000103b38                send
+ .text          0x0000000000103beb       0x95 binaries/signal.o
+                0x0000000000103beb                signal
+ .text          0x0000000000103c80       0xba binaries/signaln.o
+                0x0000000000103c80                signaln
+ .text          0x0000000000103d3a       0xc0 binaries/sleep.o
+                0x0000000000103d3a                sleepms
+                0x0000000000103dc4                sleep
+ .text          0x0000000000103dfa        0xd binaries/stackoverflowA.o
+                0x0000000000103dfa                stackoverflowA
+ .text          0x0000000000103e07       0x23 binaries/stackoverflowB.o
+                0x0000000000103e07                stackoverflowB
+ .text          0x0000000000103e2a       0xac binaries/suspend.o
+                0x0000000000103e2a                suspend
+ .text          0x0000000000103ed6       0x3a binaries/testloop.o
+                0x0000000000103ed6                testloop
+ .text          0x0000000000103f10       0x91 binaries/unsleep.o
+                0x0000000000103f10                unsleep
+ .text          0x0000000000103fa1       0x19 binaries/userret.o
+                0x0000000000103fa1                userret
+ .text          0x0000000000103fba       0xaa binaries/wait.o
+                0x0000000000103fba                wait
+ .text          0x0000000000104064       0x71 binaries/wakeup.o
+                0x0000000000104064                wakeup
+ .text          0x00000000001040d5       0x5c binaries/write.o
+                0x00000000001040d5                write
+ .text          0x0000000000104131       0x1a binaries/xdone.o
+                0x0000000000104131                xdone
+ .text          0x000000000010414b       0x6c binaries/xts_dequeue.o
+                0x000000000010414b                xts_dequeue
+ .text          0x00000000001041b7       0x82 binaries/xts_enqueue.o
+                0x00000000001041b7                xts_enqueue
+ .text          0x0000000000104239       0x35 binaries/xts_priochk.o
+                0x0000000000104239                xts_priochk
+ .text          0x000000000010426e       0x26 binaries/yield.o
+                0x000000000010426e                yield
+ .text          0x0000000000104294       0x11 binaries/abs.o
+                0x0000000000104294                abs
+ .text          0x00000000001042a5       0x80 binaries/atoi.o
+                0x00000000001042a5                atoi
+ .text          0x0000000000104325       0x80 binaries/atol.o
+                0x0000000000104325                atol
+ .text          0x00000000001043a5       0x1a binaries/bzero.o
+                0x00000000001043a5                bzero
+ .text          0x00000000001043bf        0x0 binaries/ctype_.o
+ .text          0x00000000001043bf      0x6ad binaries/doprnt.o
+                0x0000000000104512                _doprnt
+ .text          0x0000000000104a6c      0x5e5 binaries/doscan.o
+                0x0000000000104a6c                _doscan
+ .text          0x0000000000105051      0x64e binaries/fdoprnt.o
+                0x00000000001050d6                _fdoprnt
+ .text          0x000000000010569f       0x1c binaries/fgetc.o
+                0x000000000010569f                fgetc
+ .text          0x00000000001056bb       0x5b binaries/fgets.o
+                0x00000000001056bb                fgets
+ .text          0x0000000000105716       0x21 binaries/fprintf.o
+                0x0000000000105716                fprintf
+ .text          0x0000000000105737       0x27 binaries/fputc.o
+                0x0000000000105737                fputc
+ .text          0x000000000010575e       0x3a binaries/fputs.o
+                0x000000000010575e                fputs
+ .text          0x0000000000105798       0x6a binaries/fscanf.o
+                0x00000000001057d6                fscanf
+ .text          0x0000000000105802       0x1d binaries/getchar.o
+                0x0000000000105802                getchar
+ .text          0x000000000010581f       0x11 binaries/labs.o
+                0x000000000010581f                labs
+ .text          0x0000000000105830       0x36 binaries/memchr.o
+                0x0000000000105830                memchr
+ .text          0x0000000000105866       0x4a binaries/memcmp.o
+                0x0000000000105866                memcmp
+ .text          0x00000000001058b0       0x26 binaries/memcpy.o
+                0x00000000001058b0                memcpy
+ .text          0x00000000001058d6       0x1f binaries/memset.o
+                0x00000000001058d6                memset
+ .text          0x00000000001058f5       0x2e binaries/printf.o
+                0x00000000001058f5                printf
+ .text          0x0000000000105923       0x20 binaries/putchar.o
+                0x0000000000105923                putchar
+ .text          0x0000000000105943      0x1d0 binaries/qsort.o
+                0x0000000000105aeb                qsort
+ .text          0x0000000000105b13       0x4c binaries/rand.o
+                0x0000000000105b13                srand
+                0x0000000000105b20                rand
+ .text          0x0000000000105b5f       0x48 binaries/sprintf.o
+                0x0000000000105b78                sprintf
+ .text          0x0000000000105ba7       0x5a binaries/sscanf.o
+                0x0000000000105bd7                sscanf
+ .text          0x0000000000105c01       0x2f binaries/strchr.o
+                0x0000000000105c01                strchr
+ .text          0x0000000000105c30       0x45 binaries/strcmp.o
+                0x0000000000105c30                strcmp
+ .text          0x0000000000105c75       0x1c binaries/strcpy.o
+                0x0000000000105c75                strcpy
+ .text          0x0000000000105c91       0x20 binaries/strlen.o
+                0x0000000000105c91                strlen
+ .text          0x0000000000105cb1       0x3d binaries/strncat.o
+                0x0000000000105cb1                strncat
+ .text          0x0000000000105cee       0x3b binaries/strncmp.o
+                0x0000000000105cee                strncmp
+ .text          0x0000000000105d29       0x59 binaries/strncpy.o
+                0x0000000000105d29                strncpy
+ .text          0x0000000000105d82       0x38 binaries/strnlen.o
+                0x0000000000105d82                strnlen
+ .text          0x0000000000105dba       0x32 binaries/strrchr.o
+                0x0000000000105dba                strrchr
+ .text          0x0000000000105dec       0x68 binaries/strstr.o
+                0x0000000000105dec                strstr
+ .text          0x0000000000105e54      0x112 binaries/ttycontrol.o
+                0x0000000000105e54                ttycontrol
+ .text          0x0000000000105f66       0xb0 binaries/ttygetc.o
+                0x0000000000105f66                ttygetc
+ .text          0x0000000000106016      0x4aa binaries/ttyhandle_in.o
+                0x00000000001060da                ttyhandle_in
+ .text          0x00000000001064c0      0x158 binaries/ttyhandle_out.o
+                0x00000000001064c0                ttyhandle_out
+ .text          0x0000000000106618       0x85 binaries/ttyhandler.o
+                0x0000000000106618                ttyhandler
+ .text          0x000000000010669d      0x15d binaries/ttyinit.o
+                0x000000000010669d                ttyinit
+ .text          0x00000000001067fa        0xf binaries/ttykickout.o
+                0x00000000001067fa                ttykickout
+ .text          0x0000000000106809       0xb2 binaries/ttyputc.o
+                0x0000000000106809                ttyputc
+ .text          0x00000000001068bb       0xfd binaries/ttyread.o
+                0x00000000001068bb                ttyread
+ .text          0x00000000001069b8       0x4d binaries/ttywrite.o
+                0x00000000001069b8                ttywrite
+ .text          0x0000000000106a05      0x129 binaries/mount.o
+                0x0000000000106a05                namlen
+                0x0000000000106a41                mount
+ .text          0x0000000000106b2e      0x1c4 binaries/naminit.o
+                0x0000000000106b2e                naminit
+ .text          0x0000000000106cf2      0x1fe binaries/nammap.o
+                0x0000000000106cf2                namrepl
+                0x0000000000106e15                namcpy
+                0x0000000000106e63                nammap
+ .text          0x0000000000106ef0       0x44 binaries/namopen.o
+                0x0000000000106ef0                namopen
+ .text          0x0000000000106f34       0xd8 binaries/colon2mac.o
+                0x0000000000106f34                colon2mac
+ .text          0x000000000010700c       0x7d binaries/ethcontrol.o
+                0x000000000010700c                ethcontrol
+ .text          0x0000000000107089      0x16e binaries/ethhandler.o
+                0x0000000000107089                ethhandler
+ .text          0x00000000001071f7      0x51d binaries/ethinit.o
+                0x00000000001071f7                eth_phy_read
+                0x0000000000107237                eth_phy_write
+                0x0000000000107278                eth_phy_reset
+                0x0000000000107352                ethinit
+ .text          0x0000000000107714       0xef binaries/ethmcast.o
+                0x0000000000107714                ethmcast_add
+                0x0000000000107760                ethmcast_remove
+ .text          0x0000000000107803      0x14c binaries/ethread.o
+                0x0000000000107803                ethread
+ .text          0x000000000010794f       0xc1 binaries/ethwrite.o
+                0x000000000010794f                ethwrite
+ .text          0x0000000000107a10       0x68 binaries/rdsbufalloc.o
+                0x0000000000107a10                rdsbufalloc
+ .text          0x0000000000107a78       0xce binaries/rdsclose.o
+                0x0000000000107a78                rdsclose
+ .text          0x0000000000107b46      0x1e3 binaries/rdscomm.o
+                0x0000000000107b46                rdscomm
+ .text          0x0000000000107d29      0x1c4 binaries/rdscontrol.o
+                0x0000000000107d29                rdscontrol
+ .text          0x0000000000107eed      0x1e0 binaries/rdsinit.o
+                0x0000000000107eed                rdsinit
+ .text          0x00000000001080cd      0x199 binaries/rdsopen.o
+                0x00000000001080cd                rdsopen
+ .text          0x0000000000108266      0x2b7 binaries/rdsprocess.o
+                0x0000000000108266                rdsprocess
+ .text          0x000000000010851d      0x1d8 binaries/rdsread.o
+                0x000000000010851d                rdsread
+ .text          0x00000000001086f5      0x1ae binaries/rdswrite.o
+                0x00000000001086f5                rdswrite
+ .text          0x00000000001088a3        0xa binaries/ramclose.o
+                0x00000000001088a3                ramclose
+ .text          0x00000000001088ad       0x35 binaries/raminit.o
+                0x00000000001088ad                raminit
+ .text          0x00000000001088e2        0xa binaries/ramopen.o
+                0x00000000001088e2                ramopen
+ .text          0x00000000001088ec       0x26 binaries/ramread.o
+                0x00000000001088ec                ramread
+ .text          0x0000000000108912       0x26 binaries/ramwrite.o
+                0x0000000000108912                ramwrite
+ .text          0x0000000000108938       0x87 binaries/lfdballoc.o
+                0x0000000000108938                lfdballoc
+ .text          0x00000000001089bf       0x49 binaries/lfdbfree.o
+                0x00000000001089bf                lfdbfree
+ .text          0x0000000000108a08       0xa1 binaries/lfflush.o
+                0x0000000000108a08                lfflush
+ .text          0x0000000000108aa9       0x82 binaries/lfgetmode.o
+                0x0000000000108aa9                lfgetmode
+ .text          0x0000000000108b2b       0x60 binaries/lfiballoc.o
+                0x0000000000108b2b                lfiballoc
+ .text          0x0000000000108b8b       0x27 binaries/lfibclear.o
+                0x0000000000108b8b                lfibclear
+ .text          0x0000000000108bb2       0x6c binaries/lfibget.o
+                0x0000000000108bb2                lfibget
+ .text          0x0000000000108c1e       0x88 binaries/lfibput.o
+                0x0000000000108c1e                lfibput
+ .text          0x0000000000108ca6       0xa4 binaries/lflclose.o
+                0x0000000000108ca6                lflclose
+ .text          0x0000000000108d4a       0xc2 binaries/lflcontrol.o
+                0x0000000000108d4a                lflcontrol
+ .text          0x0000000000108e0c       0xfb binaries/lflgetc.o
+                0x0000000000108e0c                lflgetc
+ .text          0x0000000000108f07       0xe7 binaries/lflinit.o
+                0x0000000000108f07                lflinit
+ .text          0x0000000000108fee      0x125 binaries/lflputc.o
+                0x0000000000108fee                lflputc
+ .text          0x0000000000109113       0x6b binaries/lflread.o
+                0x0000000000109113                lflread
+ .text          0x000000000010917e       0xbd binaries/lflseek.o
+                0x000000000010917e                lflseek
+ .text          0x000000000010923b       0x52 binaries/lflwrite.o
+                0x000000000010923b                lflwrite
+ .text          0x000000000010928d      0x114 binaries/lfsckfmt.o
+                0x000000000010928d                lfsckfmt
+ .text          0x00000000001093a1      0x1e6 binaries/lfscreate.o
+                0x00000000001093a1                lfscreate
+ .text          0x0000000000109587      0x1b1 binaries/lfsetup.o
+                0x0000000000109587                lfsetup
+ .text          0x0000000000109738       0x45 binaries/lfsinit.o
+                0x0000000000109738                lfsinit
+ .text          0x000000000010977d      0x2fe binaries/lfsopen.o
+                0x000000000010977d                lfsopen
+ .text          0x0000000000109a7b      0x112 binaries/lftruncate.o
+                0x0000000000109a7b                lftruncate
+ .text          0x0000000000109b8d       0x69 binaries/rflclose.o
+                0x0000000000109b8d                rflclose
+ .text          0x0000000000109bf6       0x29 binaries/rflgetc.o
+                0x0000000000109bf6                rflgetc
+ .text          0x0000000000109c1f       0x6c binaries/rflinit.o
+                0x0000000000109c1f                rflinit
+ .text          0x0000000000109c8b       0x29 binaries/rflputc.o
+                0x0000000000109c8b                rflputc
+ .text          0x0000000000109cb4      0x2ba binaries/rflread.o
+                0x0000000000109cb4                rflread
+ .text          0x0000000000109f6e       0x68 binaries/rflseek.o
+                0x0000000000109f6e                rflseek
+ .text          0x0000000000109fd6      0x2fa binaries/rflwrite.o
+                0x0000000000109fd6                rflwrite
+ .text          0x000000000010a2d0      0x17c binaries/rfscomm.o
+                0x000000000010a2d0                rfscomm
+ .text          0x000000000010a44c      0x22b binaries/rfscontrol.o
+                0x000000000010a44c                rfscontrol
+ .text          0x000000000010a677       0x82 binaries/rfsgetmode.o
+                0x000000000010a677                rfsgetmode
+ .text          0x000000000010a6f9       0x7e binaries/rfsinit.o
+                0x000000000010a6f9                rfsinit
+ .text          0x000000000010a777       0xad binaries/rfsndmsg.o
+                0x000000000010a777                rfsndmsg
+ .text          0x000000000010a824      0x243 binaries/rfsopen.o
+                0x000000000010a824                rfsopen
+ .text          0x000000000010aa67      0x626 binaries/arp.o
+                0x000000000010aa67                arp_init
+                0x000000000010aa83                arp_alloc
+                0x000000000010ab2a                arp_ntoh
+                0x000000000010ab97                arp_hton
+                0x000000000010ac04                arp_resolve
+                0x000000000010ae55                arp_in
+ .text          0x000000000010b08d      0x5e3 binaries/dhcp.o
+                0x000000000010b08d                dhcp_get_opt_val
+                0x000000000010b0e1                dhcp_bld_bootp_msg
+                0x000000000010b1b3                dhcp_bld_disc
+                0x000000000010b205                dhcp_bld_req
+                0x000000000010b2a0                getlocalip
+ .text          0x000000000010b670       0xdf binaries/dot2ip.o
+                0x000000000010b670                dot2ip
+ .text          0x000000000010b74f      0x38c binaries/hexdump.o
+                0x000000000010b74f                hexdump
+                0x000000000010b8a9                hexadump
+ .text          0x000000000010badb      0x6eb binaries/icmp.o
+                0x000000000010badb                icmp_init
+                0x000000000010baf7                icmp_register
+                0x000000000010bbb5                icmp_recv
+                0x000000000010bd58                icmp_mkpkt
+                0x000000000010be25                icmp_in
+                0x000000000010bfbd                icmp_send
+                0x000000000010c02c                icmp_release
+                0x000000000010c13e                icmp_cksum
+                0x000000000010c198                icmp_hton
+                0x000000000010c1af                icmp_ntoh
+ .text          0x000000000010c1c6      0x5dc binaries/ip.o
+                0x000000000010c1c6                ip_local
+                0x000000000010c206                ipcksum
+                0x000000000010c256                ip_ntoh
+                0x000000000010c2c3                ip_in
+                0x000000000010c3e8                ip_hton
+                0x000000000010c455                ip_out
+                0x000000000010c50b                ip_send
+                0x000000000010c617                ipout
+                0x000000000010c70a                ip_enqueue
+ .text          0x000000000010c7a2      0x1b2 binaries/net.o
+                0x000000000010c7a2                net_init
+                0x000000000010c899                eth_hton
+                0x000000000010c8a6                eth_ntoh
+                0x000000000010c8b3                netin
+ .text          0x000000000010c954       0xb9 binaries/netstart.o
+                0x000000000010c954                netstart
+ .text          0x000000000010ca0d      0xa30 binaries/pdump.o
+                0x000000000010ca0d                pdump
+                0x000000000010cff2                pdumph
+ .text          0x000000000010d43d      0x5c4 binaries/tftp.o
+                0x000000000010d43d                tftp_send1
+                0x000000000010d551                tftpget_mb
+                0x000000000010d9de                tftpget
+ .text          0x000000000010da01      0xa10 binaries/udp.o
+                0x000000000010da01                udp_init
+                0x000000000010da42                udp_in
+                0x000000000010db6b                udp_register
+                0x000000000010dc7c                udp_recv
+                0x000000000010de16                udp_recvaddr
+                0x000000000010dfc4                udp_send
+                0x000000000010e172                udp_sendto
+                0x000000000010e2db                udp_release
+                0x000000000010e3e3                udp_ntoh
+                0x000000000010e3fa                udp_hton
+ .text          0x000000000010e411      0x10e binaries/addargs.o
+                0x000000000010e411                addargs
+ .text          0x000000000010e51f      0x1db binaries/lexan.o
+                0x000000000010e51f                lexan
+ .text          0x000000000010e6fa      0x63d binaries/shell.o
+                0x000000000010e6fa                shell
+ .text          0x000000000010ed37       0x59 binaries/xsh_argecho.o
+                0x000000000010ed37                xsh_argecho
+ .text          0x000000000010ed90      0x1fb binaries/xsh_arp.o
+                0x000000000010ed90                xsh_arp
+ .text          0x000000000010ef8b      0x1db binaries/xsh_cat.o
+                0x000000000010ef8b                xsh_cat
+ .text          0x000000000010f166       0x4f binaries/xsh_clear.o
+                0x000000000010f166                xsh_clear
+ .text          0x000000000010f1b5      0x25d binaries/xsh_date.o
+                0x000000000010f1b5                xsh_date
+ .text          0x000000000010f412       0x80 binaries/xsh_devdump.o
+                0x000000000010f412                xsh_devdump
+ .text          0x000000000010f492       0x63 binaries/xsh_echo.o
+                0x000000000010f492                xsh_echo
+ .text          0x000000000010f4f5        0xa binaries/xsh_exit.o
+                0x000000000010f4f5                xsh_exit
+ .text          0x000000000010f4ff      0x31f binaries/xsh_help.o
+                0x000000000010f4ff                xsh_help
+ .text          0x000000000010f81e      0x367 binaries/xsh_ipaddr.o
+                0x000000000010f81e                xsh_ipaddr
+ .text          0x000000000010fb85      0x1aa binaries/xsh_kill.o
+                0x000000000010fb85                xsh_kill
+ .text          0x000000000010fd2f      0x3c0 binaries/xsh_memdump.o
+                0x000000000010fdf5                xsh_memdump
+ .text          0x00000000001100ef      0x1cc binaries/xsh_memstat.o
+                0x00000000001100ef                xsh_memstat
+ .text          0x00000000001102bb      0x27f binaries/xsh_ping.o
+                0x00000000001102bb                xsh_ping
+ .text          0x000000000011053a      0x19c binaries/xsh_ps.o
+                0x000000000011053a                xsh_ps
+ .text          0x00000000001106d6      0x1a3 binaries/xsh_sleep.o
+                0x00000000001106d6                xsh_sleep
+ .text          0x0000000000110879      0x1c4 binaries/xsh_udpdump.o
+                0x0000000000110879                xsh_udpdump
+ .text          0x0000000000110a3d      0x3ad binaries/xsh_udpecho.o
+                0x0000000000110a3d                xsh_udpecho
+ .text          0x0000000000110dea      0x1fc binaries/xsh_udpeserver.o
+                0x0000000000110dea                xsh_udpeserver
+ .text          0x0000000000110fe6      0x1b0 binaries/xsh_uptime.o
+                0x0000000000110fe6                xsh_uptime
+ .text          0x0000000000111196        0xe binaries/clkdisp.o
+                0x0000000000111196                clkdisp
+ .text          0x00000000001111a4       0x19 binaries/ctxsw.o
+                0x00000000001111a4                ctxsw
+ .text          0x00000000001111bd       0x31 binaries/host2netca.o
+                0x00000000001111bd                host2netca
+ .text          0x00000000001111ee        0xa binaries/host2net.o
+                0x00000000001111ee                host2net
+ .text          0x00000000001111f8      0x368 binaries/intr.o
+                0x00000000001111f8                disable
+                0x0000000000111201                restore
+                0x000000000011120f                enable
+                0x0000000000111211                pause
+                0x0000000000111218                halt
+                0x000000000011121b                spurious_irq7
+                0x0000000000111220                spurious_irq15
+                0x000000000011122f                _Xint0
+                0x000000000011123a                _Xint1
+                0x0000000000111245                _Xint2
+                0x0000000000111250                _Xint3
+                0x000000000011125b                _Xint4
+                0x0000000000111266                _Xint5
+                0x0000000000111271                _Xint6
+                0x000000000011127c                _Xint7
+                0x0000000000111287                _Xint8
+                0x0000000000111292                _Xint9
+                0x000000000011129d                _Xint10
+                0x00000000001112a8                _Xint11
+                0x00000000001112b6                _Xint12
+                0x00000000001112c4                _Xint13
+                0x00000000001112d2                _Xint14
+                0x00000000001112e0                _Xint15
+                0x00000000001112ee                _Xint16
+                0x00000000001112fc                _Xint17
+                0x000000000011130a                _Xint18
+                0x0000000000111318                _Xint19
+                0x0000000000111326                _Xint20
+                0x0000000000111334                _Xint21
+                0x0000000000111342                _Xint22
+                0x0000000000111350                _Xint23
+                0x000000000011135e                _Xint24
+                0x000000000011136c                _Xint25
+                0x000000000011137a                _Xint26
+                0x0000000000111388                _Xint27
+                0x0000000000111396                _Xint28
+                0x00000000001113a4                _Xint29
+                0x00000000001113b2                _Xint30
+                0x00000000001113c0                _Xint31
+                0x00000000001113ce                _Xint32
+                0x00000000001113dc                _Xint33
+                0x00000000001113ea                _Xint34
+                0x00000000001113f8                _Xint35
+                0x0000000000111406                _Xint36
+                0x0000000000111414                _Xint37
+                0x0000000000111422                _Xint38
+                0x0000000000111430                _Xint39
+                0x000000000011143e                _Xint40
+                0x000000000011144c                _Xint41
+                0x000000000011145a                _Xint42
+                0x0000000000111468                _Xint43
+                0x0000000000111476                _Xint44
+                0x0000000000111484                _Xint45
+                0x0000000000111492                _Xint46
+                0x00000000001114a0                defevec
+ .text          0x0000000000111560        0xf binaries/ttydispatch.o
+                0x0000000000111560                ttydispatch
+ .text          0x000000000011156f       0x13 binaries/ethdispatch.o
+                0x000000000011156f                ethdispatch
  *(.rodata .rodata.*)
+ *fill*         0x0000000000111582        0x2 
  .rodata.str1.4
-                0x0000000000111570       0xe6 binaries/appl1.o
+                0x0000000000111584       0xe6 binaries/appl1.o
  .rodata.str1.1
-                0x0000000000111656       0x54 binaries/ascdate.o
- *fill*         0x00000000001116aa        0x2 
+                0x000000000011166a       0x54 binaries/ascdate.o
+ *fill*         0x00000000001116be        0x2 
  .rodata.str1.4
-                0x00000000001116ac       0x22 binaries/ascdate.o
+                0x00000000001116c0       0x22 binaries/ascdate.o
  .rodata.str1.1
-                0x00000000001116ce       0x5f binaries/conf.o
- *fill*         0x000000000011172d        0x3 
+                0x00000000001116e2       0x5f binaries/conf.o
+ *fill*         0x0000000000111741        0x3 
  .rodata.str1.4
-                0x0000000000111730       0x52 binaries/cpubound.o
- .rodata        0x0000000000111782       0x32 binaries/cpubound.o
+                0x0000000000111744       0x52 binaries/cpubound.o
+ .rodata        0x0000000000111796       0x32 binaries/cpubound.o
  .rodata.str1.1
-                0x00000000001117b4       0x32 binaries/cputest.o
- *fill*         0x00000000001117e6        0x2 
+                0x00000000001117c8       0x32 binaries/cputest.o
+ *fill*         0x00000000001117fa        0x2 
  .rodata.str1.4
-                0x00000000001117e8       0x4f binaries/early_imr.o
- *fill*         0x0000000000111837        0x1 
- .rodata        0x0000000000111838       0x33 binaries/early_imr.o
+                0x00000000001117fc       0x4f binaries/early_imr.o
+ *fill*         0x000000000011184b        0x1 
+ .rodata        0x000000000011184c       0x33 binaries/early_imr.o
  .rodata.str1.1
-                0x000000000011186b      0x20c binaries/evec.o
- *fill*         0x0000000000111a77        0x1 
+                0x000000000011187f      0x20c binaries/evec.o
+ *fill*         0x0000000000111a8b        0x1 
  .rodata.str1.4
-                0x0000000000111a78       0x23 binaries/evec.o
- *fill*         0x0000000000111a9b        0x1 
+                0x0000000000111a8c       0x23 binaries/evec.o
+ *fill*         0x0000000000111aaf        0x1 
  .rodata.str1.4
-                0x0000000000111a9c       0x3a binaries/fun1.o
+                0x0000000000111ab0       0x3a binaries/fun1.o
                                          0xa9 (size before relaxing)
  .rodata.str1.1
-                0x0000000000111ad6        0xb binaries/getutime.o
- *fill*         0x0000000000111ae1        0x3 
+                0x0000000000111aea        0xb binaries/getutime.o
+ *fill*         0x0000000000111af5        0x3 
  .rodata.str1.4
-                0x0000000000111ae4       0x54 binaries/getutime.o
+                0x0000000000111af8       0x54 binaries/getutime.o
  .rodata.str1.1
-                0x0000000000111b38       0x34 binaries/initialize.o
+                0x0000000000111b4c       0x34 binaries/initialize.o
                                          0x38 (size before relaxing)
  .rodata.str1.4
-                0x0000000000111b6c       0x90 binaries/initialize.o
+                0x0000000000111b80       0x90 binaries/initialize.o
  .rodata.str1.4
-                0x0000000000111bfc       0x52 binaries/iobound.o
+                0x0000000000111c10       0x52 binaries/iobound.o
  .rodata.str1.1
-                0x0000000000111bfc       0x2d binaries/iotest.o
- *fill*         0x0000000000111c29        0x3 
- .rodata        0x0000000000111c2c       0x20 binaries/kill.o
+                0x0000000000111c10       0x2d binaries/iotest.o
+ *fill*         0x0000000000111c3d        0x3 
+ .rodata        0x0000000000111c40       0x20 binaries/kill.o
  .rodata.str1.1
-                0x0000000000111c4c       0x25 binaries/main.o
- *fill*         0x0000000000111c71        0x3 
+                0x0000000000111c60       0x25 binaries/main.o
+ *fill*         0x0000000000111c85        0x3 
  .rodata.str1.4
-                0x0000000000111c74      0x17f binaries/main.o
- *fill*         0x0000000000111df3        0x1 
+                0x0000000000111c88      0x17f binaries/main.o
+ *fill*         0x0000000000111e07        0x1 
  .rodata.str1.4
-                0x0000000000111df4       0x23 binaries/meminit.o
+                0x0000000000111e08       0x23 binaries/meminit.o
  .rodata.str1.1
-                0x0000000000111e17       0x1b binaries/meminit.o
+                0x0000000000111e2b       0x1b binaries/meminit.o
  .rodata.str1.1
-                0x0000000000111e32       0x39 binaries/mixedtest.o
+                0x0000000000111e46       0x39 binaries/mixedtest.o
  .rodata.str1.1
-                0x0000000000111e6b        0xf binaries/panic.o
- *fill*         0x0000000000111e7a        0x2 
+                0x0000000000111e7f        0xf binaries/panic.o
+ *fill*         0x0000000000111e8e        0x2 
  .rodata.str1.4
-                0x0000000000111e7c       0x97 binaries/prnsegadd.o
+                0x0000000000111e90       0x97 binaries/prnsegadd.o
  .rodata.str1.1
-                0x0000000000111f13       0x5f binaries/prnsegadd.o
+                0x0000000000111f27       0x5f binaries/prnsegadd.o
  .rodata.str1.1
-                0x0000000000111f72       0x1c binaries/ptinit.o
- *fill*         0x0000000000111f8e        0x2 
+                0x0000000000111f86       0x1c binaries/ptinit.o
+ *fill*         0x0000000000111fa2        0x2 
  .rodata.str1.4
-                0x0000000000111f90       0x25 binaries/ptsend.o
+                0x0000000000111fa4       0x25 binaries/ptsend.o
  .rodata.str1.1
-                0x0000000000111fb5       0x22 binaries/quark_pdat.o
+                0x0000000000111fc9       0x22 binaries/quark_pdat.o
  .rodata.str1.1
-                0x0000000000111fd7       0x12 binaries/testloop.o
- *fill*         0x0000000000111fe9        0x3 
+                0x0000000000111feb       0x12 binaries/testloop.o
+ *fill*         0x0000000000111ffd        0x3 
  .rodata.str1.4
-                0x0000000000111fec       0x27 binaries/xdone.o
- *fill*         0x0000000000112013        0xd 
- .rodata        0x0000000000112020       0x81 binaries/ctype_.o
-                0x0000000000112020                _ctype_
+                0x0000000000112000       0x27 binaries/xdone.o
+ *fill*         0x0000000000112027       0x19 
+ .rodata        0x0000000000112040       0x81 binaries/ctype_.o
+                0x0000000000112040                _ctype_
  .rodata.str1.1
-                0x00000000001120a1       0x29 binaries/doprnt.o
- *fill*         0x00000000001120ca        0x2 
- .rodata        0x00000000001120cc       0xc4 binaries/doprnt.o
- .rodata        0x0000000000112190       0x98 binaries/doscan.o
+                0x00000000001120c1       0x29 binaries/doprnt.o
+ *fill*         0x00000000001120ea        0x2 
+ .rodata        0x00000000001120ec       0xc4 binaries/doprnt.o
+ .rodata        0x00000000001121b0       0x98 binaries/doscan.o
  .rodata.str1.1
-                0x0000000000112228       0x29 binaries/fdoprnt.o
- .rodata        0x0000000000112228       0x84 binaries/fdoprnt.o
- .rodata        0x00000000001122ac       0x20 binaries/ttycontrol.o
+                0x0000000000112248       0x29 binaries/fdoprnt.o
+ .rodata        0x0000000000112248       0x84 binaries/fdoprnt.o
+ .rodata        0x00000000001122cc       0x20 binaries/ttycontrol.o
  .rodata.str1.4
-                0x00000000001122cc       0x4c binaries/naminit.o
+                0x00000000001122ec       0x4c binaries/naminit.o
  .rodata.str1.1
-                0x0000000000112318       0x32 binaries/naminit.o
+                0x0000000000112338       0x32 binaries/naminit.o
                                          0x35 (size before relaxing)
  .rodata.str1.1
-                0x000000000011234a       0x15 binaries/ethinit.o
- *fill*         0x000000000011235f        0x1 
+                0x000000000011236a       0x15 binaries/ethinit.o
+ *fill*         0x000000000011237f        0x1 
  .rodata.str1.4
-                0x0000000000112360       0x2e binaries/ethinit.o
- *fill*         0x000000000011238e        0x2 
+                0x0000000000112380       0x2e binaries/ethinit.o
+ *fill*         0x00000000001123ae        0x2 
  .rodata.str1.4
-                0x0000000000112390       0x2c binaries/rdsbufalloc.o
+                0x00000000001123b0       0x2c binaries/rdsbufalloc.o
  .rodata.str1.4
-                0x00000000001123bc       0x76 binaries/rdscomm.o
- *fill*         0x0000000000112432        0x2 
+                0x00000000001123dc       0x76 binaries/rdscomm.o
+ *fill*         0x0000000000112452        0x2 
  .rodata.str1.4
-                0x0000000000112434       0x48 binaries/rdscontrol.o
+                0x0000000000112454       0x48 binaries/rdscontrol.o
  .rodata.str1.4
-                0x000000000011247c       0x7e binaries/rdsinit.o
+                0x000000000011249c       0x7e binaries/rdsinit.o
  .rodata.str1.1
-                0x00000000001124fa       0x18 binaries/rdsinit.o
- *fill*         0x0000000000112512        0x2 
+                0x000000000011251a       0x18 binaries/rdsinit.o
+ *fill*         0x0000000000112532        0x2 
  .rodata.str1.4
-                0x0000000000112514       0x22 binaries/rdsopen.o
- *fill*         0x0000000000112536        0x2 
+                0x0000000000112534       0x22 binaries/rdsopen.o
+ *fill*         0x0000000000112556        0x2 
  .rodata.str1.4
-                0x0000000000112538       0x4d binaries/rdsprocess.o
+                0x0000000000112558       0x4d binaries/rdsprocess.o
  .rodata.str1.1
-                0x0000000000112585        0x9 binaries/raminit.o
+                0x00000000001125a5        0x9 binaries/raminit.o
  .rodata.str1.1
-                0x000000000011258e       0x13 binaries/lfdballoc.o
- *fill*         0x00000000001125a1        0x3 
+                0x00000000001125ae       0x13 binaries/lfdballoc.o
+ *fill*         0x00000000001125c1        0x3 
  .rodata.str1.4
-                0x00000000001125a4       0x23 binaries/lfdballoc.o
+                0x00000000001125c4       0x23 binaries/lfdballoc.o
  .rodata.str1.1
-                0x00000000001125c7       0x14 binaries/lfiballoc.o
- *fill*         0x00000000001125db        0x1 
+                0x00000000001125e7       0x14 binaries/lfiballoc.o
+ *fill*         0x00000000001125fb        0x1 
  .rodata.str1.4
-                0x00000000001125dc       0x23 binaries/lflcontrol.o
+                0x00000000001125fc       0x23 binaries/lflcontrol.o
  .rodata.str1.1
-                0x00000000001125ff       0x64 binaries/lfsckfmt.o
- *fill*         0x0000000000112663        0x1 
+                0x000000000011261f       0x64 binaries/lfsckfmt.o
+ *fill*         0x0000000000112683        0x1 
  .rodata.str1.4
-                0x0000000000112664       0x51 binaries/lfsckfmt.o
- *fill*         0x00000000001126b5        0x3 
+                0x0000000000112684       0x51 binaries/lfsckfmt.o
+ *fill*         0x00000000001126d5        0x3 
  .rodata.str1.4
-                0x00000000001126b8       0x21 binaries/rflread.o
+                0x00000000001126d8       0x21 binaries/rflread.o
  .rodata.str1.4
-                0x00000000001126d9       0x21 binaries/rflwrite.o
- *fill*         0x00000000001126d9        0x3 
+                0x00000000001126f9       0x21 binaries/rflwrite.o
+ *fill*         0x00000000001126f9        0x3 
  .rodata.str1.4
-                0x00000000001126dc       0x75 binaries/rfscomm.o
- *fill*         0x0000000000112751        0x3 
+                0x00000000001126fc       0x75 binaries/rfscomm.o
+ *fill*         0x0000000000112771        0x3 
  .rodata.str1.4
-                0x0000000000112754       0x23 binaries/rfscontrol.o
- *fill*         0x0000000000112777        0x1 
- .rodata        0x0000000000112778       0x18 binaries/rfscontrol.o
+                0x0000000000112774       0x23 binaries/rfscontrol.o
+ *fill*         0x0000000000112797        0x1 
+ .rodata        0x0000000000112798       0x18 binaries/rfscontrol.o
  .rodata.str1.1
-                0x0000000000112790       0x10 binaries/rfsinit.o
+                0x00000000001127b0       0x10 binaries/rfsinit.o
  .rodata.str1.4
-                0x0000000000112790       0x57 binaries/rfsinit.o
- *fill*         0x00000000001127e7        0x1 
+                0x00000000001127b0       0x57 binaries/rfsinit.o
+ *fill*         0x0000000000112807        0x1 
  .rodata.str1.4
-                0x00000000001127e8       0x2a binaries/rfsndmsg.o
+                0x0000000000112808       0x2a binaries/rfsndmsg.o
  .rodata.str1.4
-                0x0000000000112812       0x22 binaries/rfsopen.o
+                0x0000000000112832       0x22 binaries/rfsopen.o
  .rodata.str1.1
-                0x0000000000112812       0x19 binaries/arp.o
- *fill*         0x000000000011282b        0x1 
+                0x0000000000112832       0x19 binaries/arp.o
+ *fill*         0x000000000011284b        0x1 
  .rodata.str1.4
-                0x000000000011282c       0x21 binaries/arp.o
- *fill*         0x000000000011284d        0x3 
+                0x000000000011284c       0x21 binaries/arp.o
+ *fill*         0x000000000011286d        0x3 
  .rodata.str1.4
-                0x0000000000112850       0xa6 binaries/dhcp.o
+                0x0000000000112870       0xa6 binaries/dhcp.o
  .rodata.str1.1
-                0x00000000001128f6       0x4a binaries/dhcp.o
+                0x0000000000112916       0x4a binaries/dhcp.o
  .rodata.str1.1
-                0x0000000000112940       0x5a binaries/hexdump.o
+                0x0000000000112960       0x5a binaries/hexdump.o
                                          0x61 (size before relaxing)
- *fill*         0x000000000011299a        0x2 
+ *fill*         0x00000000001129ba        0x2 
  .rodata.str1.4
-                0x000000000011299c       0x67 binaries/hexdump.o
- *fill*         0x0000000000112a03        0x1 
+                0x00000000001129bc       0x67 binaries/hexdump.o
+ *fill*         0x0000000000112a23        0x1 
  .rodata.str1.4
-                0x0000000000112a04       0x29 binaries/icmp.o
+                0x0000000000112a24       0x29 binaries/icmp.o
  .rodata.str1.1
-                0x0000000000112a2d       0x4e binaries/ip.o
- *fill*         0x0000000000112a7b        0x1 
+                0x0000000000112a4d       0x4e binaries/ip.o
+ *fill*         0x0000000000112a9b        0x1 
  .rodata.str1.4
-                0x0000000000112a7c       0x20 binaries/ip.o
+                0x0000000000112a9c       0x20 binaries/ip.o
  .rodata.str1.4
-                0x0000000000112a9c       0x28 binaries/net.o
+                0x0000000000112abc       0x28 binaries/net.o
  .rodata.str1.1
-                0x0000000000112ac4       0x27 binaries/net.o
- *fill*         0x0000000000112aeb        0x1 
+                0x0000000000112ae4       0x27 binaries/net.o
+ *fill*         0x0000000000112b0b        0x1 
  .rodata.str1.4
-                0x0000000000112aec       0xcf binaries/netstart.o
+                0x0000000000112b0c       0xcf binaries/netstart.o
  .rodata.str1.1
-                0x0000000000112bbb      0x141 binaries/pdump.o
+                0x0000000000112bdb      0x141 binaries/pdump.o
                                         0x14b (size before relaxing)
  .rodata.str1.4
-                0x0000000000112cfc      0x126 binaries/pdump.o
- *fill*         0x0000000000112e22        0x2 
+                0x0000000000112d1c      0x126 binaries/pdump.o
+ *fill*         0x0000000000112e42        0x2 
  .rodata.str1.4
-                0x0000000000112e24      0x148 binaries/tftp.o
+                0x0000000000112e44      0x148 binaries/tftp.o
  .rodata.str1.1
-                0x0000000000112f6c        0x6 binaries/tftp.o
+                0x0000000000112f8c        0x6 binaries/tftp.o
                                           0xa (size before relaxing)
  .rodata.str1.1
-                0x0000000000112f72       0xe3 binaries/shell.o
+                0x0000000000112f92       0xe3 binaries/shell.o
                                          0xff (size before relaxing)
- *fill*         0x0000000000113055        0x3 
+ *fill*         0x0000000000113075        0x3 
  .rodata.str1.4
-                0x0000000000113058      0x1c4 binaries/shell.o
- *fill*         0x000000000011321c        0x4 
- .rodata        0x0000000000113220       0xfc binaries/shell.o
-                0x0000000000113220                cmdtab
+                0x0000000000113078      0x1c4 binaries/shell.o
+ *fill*         0x000000000011323c        0x4 
+ .rodata        0x0000000000113240       0xfc binaries/shell.o
+                0x0000000000113240                cmdtab
  .rodata.str1.1
-                0x000000000011331c       0x26 binaries/xsh_argecho.o
+                0x000000000011333c       0x26 binaries/xsh_argecho.o
                                          0x28 (size before relaxing)
  .rodata.str1.1
-                0x0000000000113342       0x70 binaries/xsh_arp.o
+                0x0000000000113362       0x70 binaries/xsh_arp.o
                                          0x72 (size before relaxing)
- *fill*         0x00000000001133b2        0x2 
+ *fill*         0x00000000001133d2        0x2 
  .rodata.str1.4
-                0x00000000001133b4       0xb4 binaries/xsh_arp.o
+                0x00000000001133d4       0xb4 binaries/xsh_arp.o
  .rodata.str1.1
-                0x0000000000113468       0x2d binaries/xsh_cat.o
+                0x0000000000113488       0x2d binaries/xsh_cat.o
                                          0x4f (size before relaxing)
- *fill*         0x0000000000113495        0x3 
+ *fill*         0x00000000001134b5        0x3 
  .rodata.str1.4
-                0x0000000000113498       0x52 binaries/xsh_cat.o
+                0x00000000001134b8       0x52 binaries/xsh_cat.o
                                          0x79 (size before relaxing)
  .rodata.str1.1
-                0x00000000001134ea       0x15 binaries/xsh_clear.o
+                0x000000000011350a       0x15 binaries/xsh_clear.o
  .rodata.str1.1
-                0x00000000001134ff       0x46 binaries/xsh_date.o
+                0x000000000011351f       0x46 binaries/xsh_date.o
                                          0x5f (size before relaxing)
- *fill*         0x0000000000113545        0x3 
+ *fill*         0x0000000000113565        0x3 
  .rodata.str1.4
-                0x0000000000113548      0x163 binaries/xsh_date.o
+                0x0000000000113568      0x163 binaries/xsh_date.o
  .rodata.str1.1
-                0x00000000001136ab       0x5d binaries/xsh_devdump.o
+                0x00000000001136cb       0x5d binaries/xsh_devdump.o
  .rodata.str1.1
-                0x0000000000113708        0x4 binaries/xsh_echo.o
+                0x0000000000113728        0x4 binaries/xsh_echo.o
                                           0x9 (size before relaxing)
  .rodata.str1.1
-                0x000000000011370c       0x65 binaries/xsh_help.o
+                0x000000000011372c       0x65 binaries/xsh_help.o
                                          0xa3 (size before relaxing)
- *fill*         0x0000000000113771        0x3 
+ *fill*         0x0000000000113791        0x3 
  .rodata.str1.4
-                0x0000000000113774       0x7c binaries/xsh_help.o
+                0x0000000000113794       0x7c binaries/xsh_help.o
                                          0xc6 (size before relaxing)
  .rodata.str1.1
-                0x00000000001137f0       0x9c binaries/xsh_ipaddr.o
+                0x0000000000113810       0x9c binaries/xsh_ipaddr.o
                                          0xf8 (size before relaxing)
  .rodata.str1.4
-                0x000000000011388c       0x4d binaries/xsh_ipaddr.o
+                0x00000000001138ac       0x4d binaries/xsh_ipaddr.o
                                          0x99 (size before relaxing)
  .rodata.str1.1
-                0x00000000001138d9       0x78 binaries/xsh_kill.o
+                0x00000000001138f9       0x78 binaries/xsh_kill.o
                                          0x97 (size before relaxing)
- *fill*         0x0000000000113951        0x3 
+ *fill*         0x0000000000113971        0x3 
  .rodata.str1.4
-                0x0000000000113954       0x4a binaries/xsh_kill.o
+                0x0000000000113974       0x4a binaries/xsh_kill.o
                                          0x96 (size before relaxing)
  .rodata.str1.1
-                0x000000000011399e       0x84 binaries/xsh_memdump.o
+                0x00000000001139be       0x84 binaries/xsh_memdump.o
                                          0xa8 (size before relaxing)
- *fill*         0x0000000000113a22        0x2 
+ *fill*         0x0000000000113a42        0x2 
  .rodata.str1.4
-                0x0000000000113a24      0x15a binaries/xsh_memdump.o
+                0x0000000000113a44      0x15a binaries/xsh_memdump.o
                                         0x1aa (size before relaxing)
  .rodata.str1.1
-                0x0000000000113b7e       0x40 binaries/xsh_memstat.o
+                0x0000000000113b9e       0x40 binaries/xsh_memstat.o
                                          0x79 (size before relaxing)
- *fill*         0x0000000000113bbe        0x2 
+ *fill*         0x0000000000113bde        0x2 
  .rodata.str1.4
-                0x0000000000113bc0      0x187 binaries/xsh_memstat.o
+                0x0000000000113be0      0x187 binaries/xsh_memstat.o
                                         0x1af (size before relaxing)
  .rodata.str1.1
-                0x0000000000113d47       0x90 binaries/xsh_ping.o
+                0x0000000000113d67       0x90 binaries/xsh_ping.o
                                          0xaf (size before relaxing)
- *fill*         0x0000000000113dd7        0x1 
+ *fill*         0x0000000000113df7        0x1 
  .rodata.str1.4
-                0x0000000000113dd8       0x77 binaries/xsh_ping.o
+                0x0000000000113df8       0x77 binaries/xsh_ping.o
                                          0xc6 (size before relaxing)
  .rodata.str1.1
-                0x0000000000113e4f       0x74 binaries/xsh_ps.o
+                0x0000000000113e6f       0x74 binaries/xsh_ps.o
                                          0xd5 (size before relaxing)
- *fill*         0x0000000000113ec3        0x1 
+ *fill*         0x0000000000113ee3        0x1 
  .rodata.str1.4
-                0x0000000000113ec4       0x80 binaries/xsh_ps.o
+                0x0000000000113ee4       0x80 binaries/xsh_ps.o
                                          0xd0 (size before relaxing)
- *fill*         0x0000000000113f44       0x1c 
- .rodata        0x0000000000113f60       0x20 binaries/xsh_ps.o
+ *fill*         0x0000000000113f64       0x1c 
+ .rodata        0x0000000000113f80       0x20 binaries/xsh_ps.o
  .rodata.str1.1
-                0x0000000000113f80       0x31 binaries/xsh_sleep.o
+                0x0000000000113fa0       0x31 binaries/xsh_sleep.o
                                          0x72 (size before relaxing)
- *fill*         0x0000000000113fb1        0x3 
+ *fill*         0x0000000000113fd1        0x3 
  .rodata.str1.4
-                0x0000000000113fb4       0x2a binaries/xsh_sleep.o
+                0x0000000000113fd4       0x2a binaries/xsh_sleep.o
                                          0x7a (size before relaxing)
  .rodata.str1.1
-                0x0000000000113fde       0x6b binaries/xsh_udpdump.o
+                0x0000000000113ffe       0x6b binaries/xsh_udpdump.o
                                          0xd2 (size before relaxing)
- *fill*         0x0000000000114049        0x3 
+ *fill*         0x0000000000114069        0x3 
  .rodata.str1.4
-                0x000000000011404c       0x94 binaries/xsh_udpdump.o
+                0x000000000011406c       0x94 binaries/xsh_udpdump.o
                                          0xe4 (size before relaxing)
  .rodata.str1.1
-                0x00000000001140e0       0xdb binaries/xsh_udpecho.o
+                0x0000000000114100       0xdb binaries/xsh_udpecho.o
                                          0xfa (size before relaxing)
- *fill*         0x00000000001141bb        0x1 
+ *fill*         0x00000000001141db        0x1 
  .rodata.str1.4
-                0x00000000001141bc       0xc7 binaries/xsh_udpecho.o
+                0x00000000001141dc       0xc7 binaries/xsh_udpecho.o
                                         0x116 (size before relaxing)
  .rodata.str1.1
-                0x0000000000114283       0x66 binaries/xsh_udpeserver.o
+                0x00000000001142a3       0x66 binaries/xsh_udpeserver.o
                                          0x8f (size before relaxing)
- *fill*         0x00000000001142e9        0x3 
+ *fill*         0x0000000000114309        0x3 
  .rodata.str1.4
-                0x00000000001142ec       0x29 binaries/xsh_udpeserver.o
+                0x000000000011430c       0x29 binaries/xsh_udpeserver.o
                                          0x9f (size before relaxing)
  .rodata.str1.1
-                0x0000000000114315       0x49 binaries/xsh_uptime.o
+                0x0000000000114335       0x49 binaries/xsh_uptime.o
                                          0x8c (size before relaxing)
- *fill*         0x000000000011435e        0x2 
+ *fill*         0x000000000011437e        0x2 
  .rodata.str1.4
-                0x0000000000114360       0x28 binaries/xsh_uptime.o
+                0x0000000000114380       0x28 binaries/xsh_uptime.o
                                          0x76 (size before relaxing)
-                0x0000000000114388                etext = ABSOLUTE (.)
+                0x00000000001143a8                etext = ABSOLUTE (.)
                 0x0000000000115000                . = ALIGN (0x1000)
- *fill*         0x0000000000114388      0xc78 
+ *fill*         0x00000000001143a8      0xc58 
 
 .eh_frame       0x0000000000115000     0x31d8
  .eh_frame      0x0000000000115000       0x38 binaries/appl1.o

@@ -22,9 +22,9 @@ process	main(void)
   
   cputest();
   sleep(15);
-  //iotest();
-  //sleep(15);
-  //mixedtest();
+  iotest();
+  sleep(15);
+  mixedtest();
   
   /* Problem 3*/
   /*  

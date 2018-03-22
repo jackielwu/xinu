@@ -234,7 +234,7 @@ static	void	sysinit()
         xts_conf[i].xts_quantum = 20;
         xts_conf[i].xts_slpret = 59;
       }
-
+      //kprintf("%d\n", xts_conf[i].xts_quantum);
   }
   for ( i = 0; i < PRIO_LEVELS; i++)
   {

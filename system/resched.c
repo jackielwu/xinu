@@ -24,7 +24,7 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
 
 	ptold = &proctab[currpid];
   ptold->prcputot += clkmilli - ptold->prctxswbeg; /* CPU ms elapsed time */
-  //kprintf("preempt: %u\n", preempt);  
+  //kprintf("quantum: %u\n", xts_conf[ptold->prprio].xts_quantum);  
   /* null process cannot be modified */
   /*  
   if (currpid != 0)
@@ -37,7 +37,6 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
     if (preempt == 0)
     {
       ptold->prprio = xts_conf[ptold->prprio].xts_tqexp;
-      preempt = xts_conf[ptold->prprio].xts_quantum;
       ptold->prstate = PR_READY;
       xts_enqueue(currpid, ptold->prprio);
     }
@@ -58,7 +57,6 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
   {
     /* IO BOUND */
     ptold->prprio = xts_conf[ptold->prprio].xts_slpret;
-    preempt = xts_conf[ptold->prprio].xts_quantum;
   }
 
 	/* Force context switch to highest priority ready process */
@@ -70,7 +68,9 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
 	ptnew->prstate = PR_CURR;
 	ptnew->prctxswbeg = clkmilli; /* Save clk ms begin ctxsw */
   //preempt = QUANTUM;		/* Reset time slice for process	*/
-	ctxsw(&ptold->prstkptr, &ptnew->prstkptr);
+	preempt = xts_conf[ptnew->prprio].xts_quantum;
+  //kprintf("preempt: %u\n", preempt);
+  ctxsw(&ptold->prstkptr, &ptnew->prstkptr);
 
 	/* Old process returns here when resumed */
 
