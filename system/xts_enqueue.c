@@ -11,14 +11,14 @@ int xts_enqueue(pid32 pid, pri16 prio)
     //xts_ready[prio].queue_head = queuehead(prio);
     //xts_ready[prio].queue_tail = queuetail(prio);
   }
-  int tail, prev;
-  tail = xts_ready[prio].queue_tail;
-  prev = queuetab[tail].qprev;
+  int head, next;
+  head = xts_ready[prio].queue_head;
+  next = queuetab[head].qnext;
 
-  queuetab[pid].qnext = tail;
-  queuetab[pid].qprev = prev;
-  queuetab[prev].qnext = pid;
-  queuetab[tail].qprev = pid;
+  queuetab[pid].qnext = next;
+  queuetab[pid].qprev = head;
+  queuetab[next].qprev = pid;
+  queuetab[head].qnext = pid;
 
   return 0;
 }

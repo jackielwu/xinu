@@ -176,9 +176,51 @@ static	void	sysinit()
 		init(i);
 	}
   //kprintf("init tab\n");
+  #ifdef BONUS
+    PRIO_LEVELS = 20;
+
+    for (i = 0; i < PRIO_LEVELS; i++)
+    {
+      if ( i == 0)
+      {
+        xts_conf[i].xts_quantum = 200;
+        xts_conf[i].xts_tqexp = 0;
+        xts_conf[i].xts_slpret = 15;
+      }
+      else if ( i < 5)
+      {
+        xts_conf[i].xts_quantum = 160;
+        xts_conf[i].xts_tqexp = i-1;
+        xts_conf[i].xts_slpret = 15;
+      }
+      else if ( i < 10)
+      {
+        xts_conf[i].xts_quantum = 120;
+        xts_conf[i].xts_tqexp = i-1;
+        xts_conf[i].xts_slpret = 15;
+      }
+      else if ( i < 15)
+      {
+        xts_conf[i].xts_quantum = 80;
+        xts_conf[i].xts_tqexp = i-1;
+        xts_conf[i].xts_slpret = 18;
+      }
+      else if ( i < 19)
+      {
+        xts_conf[i].xts_quantum = 40;
+        xts_conf[i].xts_tqexp = i-1;
+        xts_conf[i].xts_slpret = 18;
+      }
+      else()
+      {
+        xts_conf[i].xts_quantum = 20;
+        xts_conf[i].xts_tqexp = 10;
+        xts_conf[i].xts_slpret = 19;
+      }
+    }
+  #else
   for (i = 0; i < PRIO_LEVELS; i++)
   {
-      
       xts_conf[i].xts_tqexp = (i>=10)?i-10:0;
       if ( i < 10)
       {
@@ -236,6 +278,7 @@ static	void	sysinit()
       }
       //kprintf("%d\n", xts_conf[i].xts_quantum);
   }
+  #endif
   for ( i = 0; i < PRIO_LEVELS; i++)
   {
     xts_ready[i].status = 0;
