@@ -24,7 +24,7 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
 
 	ptold = &proctab[currpid];
   ptold->prcputot += clkmilli - ptold->prctxswbeg; /* CPU ms elapsed time */
-  
+  //kprintf("preempt: %u\n", preempt);  
   /* null process cannot be modified */
   /*  
   if (currpid != 0)
@@ -44,7 +44,7 @@ void	resched(void)		/* Assumes interrupts are disabled	*/
     /* wake interupt */
     else
     {
-        kprintf("sleep\n");
+        //kprintf("sleep\n");
         return;
     }
 

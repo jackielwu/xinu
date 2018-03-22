@@ -22,8 +22,8 @@ void	clkinit(void)
 
 	/* Initialize the preemption count */
 
-	preempt = QUANTUM;
-
+	//preempt = QUANTUM;
+  preempt = 200;
 	/* Initialize the time since boot to zero */
 
 	clktime = 0;
