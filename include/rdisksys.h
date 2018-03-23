@@ -30,7 +30,10 @@
 #define	RD_BUFFS	64		/* Number of disk buffers	*/
 #define	RD_STACK	16384		/* Stack size for comm. process	*/
 #define	RD_PRIO		59		/* Priorty of comm. process	*/
-
+#ifdef BONUS
+#undef RD_PRIO
+#define RD_PRIO 19
+#endif
 /* Constants for state of the device */
 
 #define	RD_FREE		 0		/* Device is available		*/

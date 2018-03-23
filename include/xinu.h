@@ -47,3 +47,4 @@
 //#define DEBUG
 #include <limits.h>
 #include <xts_init.h>
+#define BONUS

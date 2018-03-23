@@ -1,5 +1,8 @@
+#ifdef BONUS
+#define PRIO_LEVELS 20
+#else
 #define PRIO_LEVELS 60
-
+#endif
 struct xts_tab {
   int xts_quantum;  //new time slice
   int xts_tqexp;    //new priority: CPU-intensive (time quantum expired)

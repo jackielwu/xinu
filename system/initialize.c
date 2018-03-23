@@ -177,8 +177,6 @@ static	void	sysinit()
 	}
   //kprintf("init tab\n");
   #ifdef BONUS
-    PRIO_LEVELS = 20;
-
     for (i = 0; i < PRIO_LEVELS; i++)
     {
       if ( i == 0)
@@ -211,12 +209,13 @@ static	void	sysinit()
         xts_conf[i].xts_tqexp = i-1;
         xts_conf[i].xts_slpret = 18;
       }
-      else()
+      else
       {
         xts_conf[i].xts_quantum = 20;
         xts_conf[i].xts_tqexp = 10;
         xts_conf[i].xts_slpret = 19;
       }
+      //kprintf("quantum: %d", xts_conf[i].xts_quantum);
     }
   #else
   for (i = 0; i < PRIO_LEVELS; i++)

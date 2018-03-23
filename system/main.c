@@ -19,13 +19,15 @@ process	main(void)
 
   
   recvclr();
-  
-  cputest();
-  sleep(15);
-  iotest();
-  sleep(15);
+  #ifdef BONUS
   mixedtest();
-  
+  #else
+  //cputest();
+  //sleep(15);
+  //iotest();
+  //sleep(15);
+  mixedtest();
+  #endif
   /* Problem 3*/
   /*  
   resume(create((void *)testloop, 2048, 10,"testloopA", 1, CONSOLE));
