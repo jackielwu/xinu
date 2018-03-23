@@ -22,10 +22,10 @@ process	main(void)
   #ifdef BONUS
   mixedtest();
   #else
-  //cputest();
-  //sleep(15);
-  //iotest();
-  //sleep(15);
+  cputest();
+  sleep(15);
+  iotest();
+  sleep(15);
   mixedtest();
   #endif
   /* Problem 3*/
