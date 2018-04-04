@@ -1,0 +1,34 @@
+.TH man 8 "3 April 2018" "1.0" "sendblk man page"
+.SH NAME
+sendblk \- Pass a message to a process and start recipient if waiting
+.SH SYNOPSIS
+.nf
+.B #include <xinu.h>
+.sp
+.BI "syscall sendblk(pid32 pid, umsg32	msg)"
+.sp
+.fi
+.SH DESCRIPTION
+The
+.BR sendblk ()
+system call is used, respectively, to send messages from a
+personal send queue.
+.PP
+.SS pid32 pid
+The pid is the argument of the receiver's pid.
+.SS umsg msg
+The msg is the argument of the message being set.
+.SS sendblk()
+The
+.BR sendblk ()
+system call tries to send a message to the buffer (mailbox) of the receiving process.
+If buffer is full, it enqueue itself (sender) into the receiver's sendqueue. This also
+blocks the sending process and sets the flags that lets the receiver know it has elements
+in its sendqueue.
+.SH SEE ALSO
+receive(2), send(2)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Jackie Wu <jackielwu@gmail.com>
+.SH BUGS

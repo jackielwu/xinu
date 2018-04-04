@@ -15,6 +15,10 @@ syscall	sleep(
 	if (delay > MAXSECONDS) {
 		return SYSERR;
 	}
+  if (proctab[currpid].prhascb && proctab[currpid].prhasmsg)
+  {
+    proctab[currpid].fptr();
+  }
 	sleepms(1000*delay);
 	return OK;
 }

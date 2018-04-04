@@ -551,6 +551,9 @@ extern	syscall	semreset(sid32, int32);
 /* in file send.c */
 extern	syscall	send(pid32, umsg32);
 
+/* in file sendblk.c */
+extern  syscall sendblk(pid32, umsg32);
+
 /* in file shell.c */
 extern 	process shell(did32);
 
@@ -623,6 +626,8 @@ extern	status	udp_release(uid32);
 extern	void	udp_ntoh(struct netpacket *);
 extern	void	udp_hton(struct netpacket *);
 
+/* in file cbreg.c */
+extern syscall cbreg(int (* fnp) (void));
 
 /* in file unsleep.c */
 extern	syscall	unsleep(pid32);

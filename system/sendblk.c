@@ -3,7 +3,7 @@
 #include <xinu.h>
 
 /*------------------------------------------------------------------------
- *  send  -  Pass a message to a process and start recipient if waiting
+ *  sendblk  -  Pass a message to a process and start recipient if waiting
  *------------------------------------------------------------------------
  */
 syscall	sendblk(
@@ -21,7 +21,22 @@ syscall	sendblk(
 	}
 
 	prptr = &proctab[pid];
-	if ((prptr->prstate == PR_FREE) || prptr->prhasmsg) {
+	struct procent *sp = &proctab[currpid];
+  if (prptr->prhasmsg)
+  {
+    sp->prstate = PR_SNDBLK;
+    sp->sendblkmsg = msg;
+    sp->sendblkflag = TRUE;
+    sp->sendblkrcp = pid;
+    prptr->rcpblkflag = TRUE;
+    /* Insert into blocking queue */
+    enqueue(currpid, prptr->sendqueue);
+    resched();
+    restore(mask);
+    return OK;
+  }
+  
+  if ((prptr->prstate == PR_FREE)) {
 		restore(mask);
 		return SYSERR;
 	}

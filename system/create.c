@@ -58,6 +58,11 @@ pid32	create(
 	prptr->prdesc[1] = CONSOLE;
 	prptr->prdesc[2] = CONSOLE;
 
+  /* Create blocking queue for sending messages */
+  prptr->sendblkflag = FALSE;
+  prptr->sendqueue = newqueue();
+  prptr->rcpblkflag = FALSE;
+
 	/* Initialize stack as if the process was called		*/
 
 	*saddr = STACKMAGIC;

@@ -1,0 +1,28 @@
+.TH man 8 "3 April 2018" "1.0" "receive man page"
+.SH NAME
+receive \- Wait for a message and return the message to the caller
+.SH SYNOPSIS
+.nf
+.B #include <xinu.h>
+.sp
+.BI "umsg32 receive(void)"
+.sp
+.fi
+.SH DESCRIPTION
+The
+.BR receive ()
+system call is used, respectively, to receive messages from a
+personal send queue.
+.PP
+.SS receive()
+The
+.BR receive ()
+system call grabs a message from the buffer (mailbox) and checks if it has blocking
+messages. If so, it replaces the buffer from the send queue, then finally returns the message.
+.SH SEE ALSO
+sendblk(2), send(2)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Jackie Wu <jackielwu@gmail.com>
+.SH BUGS
