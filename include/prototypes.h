@@ -580,6 +580,12 @@ extern	int32	insw(int32, int32 ,int32);
 /* in file suspend.c */
 extern	syscall	suspend(pid32);
 
+/* in file cbhandler.c */
+extern void cbhandler(void);
+
+/* in file sigcbreg.c */
+extern syscall sigcbreg( uint16 ssig, int (* fnp) (void), uint32 tmarg);
+
 /* in file ttycontrol.c */
 extern	devcall	ttycontrol(struct dentry *, int32, int32, int32);
 

@@ -63,6 +63,7 @@ struct procent {		/* Entry in the process table		*/
   
   bool8 prhascb;          /* Nonzero iff callback function has been registered */
   int (* fptr) ();        /* Pointer to cb function if one has been registered */
+  uint32 prstarttime;     /* clktime when process is created */
 };
 
 /* Marker for the top of a process stack (used to help detect overflow)	*/
