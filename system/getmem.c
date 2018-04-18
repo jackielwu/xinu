@@ -28,7 +28,12 @@ char  	*getmem(
 		if (curr->mlength == nbytes) {	/* Block is exact match	*/
 			prev->mnext = curr->mnext;
 			memlist.mlength -= nbytes;
-			restore(mask);
+			struct memblk *blk = (struct memblk *) curr;
+      blk->mnext = proctab[currpid].gclist.mnext;
+      blk->mlength = nbytes;
+      proctab[currpid].gclist.mnext = blk;
+      proctab[currpid].gclist.mlength = nbytes;
+      restore(mask);
 			return (char *)(curr);
 
 		} else if (curr->mlength > nbytes) { /* Split big block	*/
@@ -38,7 +43,12 @@ char  	*getmem(
 			leftover->mnext = curr->mnext;
 			leftover->mlength = curr->mlength - nbytes;
 			memlist.mlength -= nbytes;
-			restore(mask);
+			struct memblk *blk = (struct memblk *) curr;
+      blk->mnext = proctab[currpid].gclist.mnext;
+      blk->mlength = nbytes;
+      proctab[currpid].gclist.mnext = blk;
+      proctab[currpid].gclist.mlength = nbytes;
+      restore(mask);
 			return (char *)(curr);
 		} else {			/* Move to next block	*/
 			prev = curr;

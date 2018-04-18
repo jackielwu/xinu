@@ -31,9 +31,22 @@ syscall	kill(
 	}
 	freestk(prptr->prstkbase, prptr->prstklen);
 
+  //gc check
+  struct memblk *curr = prptr->gclist.mnext;
+  while(curr != NULL)
+  {
+    freemem((char *)curr, curr->mlength);
+    curr = curr->mnext;
+  }
+  prptr->gclist.mnext = NULL;
+  
 	switch (prptr->prstate) {
 	case PR_CURR:
 		prptr->prstate = PR_FREE;	/* Suicide */
+    struct procent *parent = & proctab[prptr->prparent];
+    parent->prnumcld--;
+    //if (parent->prchild != -1) { parent->prchild = pid; }
+    ready(prptr->prparent);
 		resched();
 
 	case PR_SLEEP:

@@ -52,6 +52,14 @@ pid32	create(
 	prptr->prsem = -1;
 	prptr->prparent = (pid32)getpid();
 	prptr->prhasmsg = FALSE;
+  prptr->prchild = -1;
+  prptr->prnumcld = 0;
+
+  struct procent *parent = &proctab[prptr->prparent];
+  parent->prnumcld++;
+  parent->prchild = pid;
+
+  prptr->prstarttime = clktime;
 
 	/* Set up stdin, stdout, and stderr descriptors for the shell	*/
 	prptr->prdesc[0] = CONSOLE;

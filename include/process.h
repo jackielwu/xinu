@@ -17,6 +17,7 @@
 #define	PR_WAIT		6	/* Process is on semaphore queue	*/
 #define	PR_RECTIM	7	/* Process is receiving with timeout	*/
 #define PR_SNDBLK 20 /* Process buffer is full */
+#define PR_CHLDWAIT 21 /* Process is waiting for child process */
 
 /* Miscellaneous process definitions */
 
@@ -64,6 +65,21 @@ struct procent {		/* Entry in the process table		*/
   bool8 prhascb;          /* Nonzero iff callback function has been registered */
   int (* fptr) ();        /* Pointer to cb function if one has been registered */
   uint32 prstarttime;     /* clktime when process is created */
+  uint32 prtmarg;         /* Wall time limit */
+  bool8 prhascb1;         /* Nonzero iff XSIGCHL callback function has been registered */
+  int (* fptr1) ();       /* Pointer to XSIGCHL cb function if one has been registered */
+  pid32 prchild;          /* PID of the first child process killed*/
+  int32 prnumcld;         /* Number of children procresses */
+  bool8 prhascb2;         /* Nonzero iff SIGXTM callback function has been registered */
+  int (* fptr2) ();       /* Pointer to SIGXTM cb function if one has been registered */
+  struct memblk gclist;         /* Linked list of allocated memory for garbage collection */
+
+  int first;              /* First Signal ran */
+  int second;             /* Second signal ran */
+  int third;              /* Third signal ran */
+
+  bool8 prhascb3;         /* Nonzero iff callback function has been registered */
+  int (* fptr3);          /* Pointer to XSIGMY */
 };
 
 /* Marker for the top of a process stack (used to help detect overflow)	*/

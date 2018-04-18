@@ -32,6 +32,31 @@ syscall	freemem(
 		next = next->mnext;
 	}
 
+  //ex parse
+  struct procent *prptr = &proctab[currpid];
+  struct memblk *gcp = &prptr->gclist;
+  struct memblk *gcc = prptr->gclist.mnext;
+
+  while (gcc != NULL)
+  {
+    if (gcc == (struct memblk *) block)
+    {
+      break;
+    }
+    gcp = gcc;
+    gcc = gcc->mnext;
+  }
+
+  if (gcc != NULL)
+  {
+    gcp->mnext = gcc->mnext;
+  }
+  else
+  {
+    block = (struct memblk *) blkaddr;
+  }
+
+
 	if (prev == &memlist) {		/* Compute top of previous block*/
 		top = (uint32) NULL;
 	} else {
@@ -45,6 +70,8 @@ syscall	freemem(
 		restore(mask);
 		return SYSERR;
 	}
+
+  // prev is the found block?
 
 	memlist.mlength += nbytes;
 

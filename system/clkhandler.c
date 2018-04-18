@@ -34,6 +34,30 @@ void	clkhandler()
 			wakeup();
 		}
 	}
+  struct procent *prptr = &proctab[currpid];
+  if (prptr->prhascb2)
+  {
+    //kprintf("registered\n");
+    if (prptr->prtmarg < (clktime - prptr->prstarttime))
+    {
+      //kprintf("stop\n");
+      if (prptr->first == 3)
+      {
+        prptr->first = 0;  
+        prptr->fptr2();
+      }
+      else if (prptr->first == 0 && prptr->second == 3)
+      {
+        prptr->second = 0;
+        prptr->fptr2();
+      }
+      else if (prptr->first == 0 && prptr->second == 0 && prptr->third == 3)
+      {
+        prptr->third = 0;
+        prptr->fptr2();
+      }
+    }
+  }
 
 	/* Decrement the preemption counter, and reschedule when the */
 	/*   remaining time reaches zero			     */

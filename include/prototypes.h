@@ -586,6 +586,9 @@ extern void cbhandler(void);
 /* in file sigcbreg.c */
 extern syscall sigcbreg( uint16 ssig, int (* fnp) (void), uint32 tmarg);
 
+/* in file childwait.c */
+extern pid32 childwait(void);
+
 /* in file ttycontrol.c */
 extern	devcall	ttycontrol(struct dentry *, int32, int32, int32);
 
